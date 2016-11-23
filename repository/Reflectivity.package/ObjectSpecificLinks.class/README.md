@@ -1,0 +1,1 @@
+Object specific MetaLinks: we need to create anon subclasses per object, the subclass is shared between *all* links that are active for this class. We can only remove it when the last link is rem

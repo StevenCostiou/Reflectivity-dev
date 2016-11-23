@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "MarcusDenker 11/23/2016 10:16",
+	"super" : "Object",
+	"category" : "Reflectivity-Links",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"links"
+	],
+	"name" : "ObjectSpecificLinks",
+	"type" : "normal"
+}

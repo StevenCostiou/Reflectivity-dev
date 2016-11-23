@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RBMessageNode",
+	"category" : "Reflectivity-Compiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RFMessageNode",
+	"type" : "normal"
+}

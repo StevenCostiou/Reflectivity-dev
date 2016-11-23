@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "MarcusDenker 4/29/2015 15:40",
+	"super" : "Object",
+	"category" : "Reflectivity-Links",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"link",
+		"entity"
+	],
+	"name" : "RFReification",
+	"type" : "normal"
+}

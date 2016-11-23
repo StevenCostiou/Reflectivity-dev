@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SystemAnnouncement",
+	"category" : "Reflectivity-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"link"
+	],
+	"name" : "MetalinkChanged",
+	"type" : "normal"
+}
