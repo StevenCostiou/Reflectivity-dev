@@ -1,3 +1,3 @@
 initialization
 addMetaLink: aLink forObject: anObject
-	(links at: anObject ifAbsentPut: Set new) add: anObject.
+	(links at: anObject ifAbsentPut: WeakSet new) add: anObject.
