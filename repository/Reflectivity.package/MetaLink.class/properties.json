@@ -3,7 +3,7 @@
 	"super" : "Object",
 	"category" : "Reflectivity-Links",
 	"classinstvars" : [
-		"objectSpecificLinks"
+		"linkInstaller"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],

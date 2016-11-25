@@ -7,7 +7,9 @@ install: aMetaLink onNode: aNode
 			 then we go out. Later when we move all the link
 			 installation logic here, the normal installation
 			 of the link on a node will happen within this block,
-			 before returning" ^ self ].
+			 before returning"
+			aNode link: aMetaLink.
+			^ self ].
 
 	"The class we are installing in"
 	class := aNode methodNode method methodClass.
@@ -21,12 +23,11 @@ install: aMetaLink onNode: aNode
 		ifNone: [ class newAnonymousSubclass ].
 
 	"Check if the ast node exists in immediateSubclass, else we copy it and we install the link"
-	self installLink: aMetaLink  onNode: aNode onClass: immediateSubclass.
+	self installLink: aMetaLink onNode: aNode inClass: immediateSubclass.
 
 	"For each object that is not of class immediateSubclass, we migrate the object"
 	objectsToMigrate := objectsForLink
-		select:
-			[ :object | (object isKindOf: class) and: [ object class isAnonymous not ] ].
+		select: [ :object | (object isKindOf: class) and: [ object class isAnonymous not ] ].
 	objectsToMigrate
 		do: [ :object | 
 			(object isKindOf: immediateSubclass)

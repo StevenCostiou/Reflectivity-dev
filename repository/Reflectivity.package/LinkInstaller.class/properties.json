@@ -8,6 +8,6 @@
 	"instvars" : [
 		"links"
 	],
-	"name" : "ObjectSpecificLinks",
+	"name" : "LinkInstaller",
 	"type" : "normal"
 }
