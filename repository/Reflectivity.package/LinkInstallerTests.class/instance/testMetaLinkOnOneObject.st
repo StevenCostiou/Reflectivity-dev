@@ -22,7 +22,7 @@ testMetaLinkOnOneObject
 	self assert: obj2 someInstVar equals: nil.
 
 	"After removing the link, the object is not affected anymore"
-	metalink uninstall.
+	metalink disableForObject: obj1.
 	obj1 someInstVar: nil.
 	obj1 someMethod.
 	obj2 someMethod.
