@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"links"
+		"links",
+		"nodesForObjects"
 	],
 	"name" : "LinkInstaller",
 	"type" : "normal"

@@ -1,3 +1,4 @@
 initialization
 initialize
-	links := WeakKeyDictionary new
+	links := WeakKeyDictionary new.
+	nodesForObjects := WeakKeyDictionary new
