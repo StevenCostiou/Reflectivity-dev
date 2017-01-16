@@ -12,7 +12,7 @@ testMetaLinkOnOneObject
 	metalink selector: #value.
 	metalink metaObject: [ obj1 someInstVar: 1 ].
 	metalink control: #before.
-	metalink enableForObject: obj1.
+	metalink activateForObject: obj1.
 	metalink linkToNode: (obj1 class >> #someMethod) ast forObject: obj1.
 
 	"Only the object on which has been installed is affected"

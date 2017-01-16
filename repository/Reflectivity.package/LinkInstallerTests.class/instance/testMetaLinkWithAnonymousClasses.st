@@ -7,7 +7,7 @@ testMetaLinkWithAnonymousClasses
 
 	"We just need to link a MetaLink to an object"
 	metalink := MetaLink new.
-	metalink enableForObject: obj1.
+	metalink activateForObject: obj1.
 	metalink linkToNode: (obj1 class >> #someMethod) ast forObject: obj1.
 
 	"One of the 2 objects must have migrated to another class"

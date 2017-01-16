@@ -1,3 +1,3 @@
 link api
-enableForObject: anObject
+activateForObject: anObject
 	self linkInstaller addMetaLink: self forObject: anObject
