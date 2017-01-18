@@ -1,4 +1,4 @@
-reflecive api
+reflective api
 disable
 	"turn off link reflectively while keeping the condition"
 	self hasReifiedCondition

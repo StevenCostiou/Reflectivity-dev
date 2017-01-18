@@ -1,11 +1,11 @@
 nodes
-isNode: aNode specificToObject: anObject
+findNode: aNode forObject: anObject
 	| nodesForObject compiledMethod |
 	nodesForObject := nodesForObjects at: anObject ifAbsent: [ ^ nil ].
 	(nodesForObject includes: aNode)
 		ifTrue: [ ^ aNode ].
 
-	"We try a second time in case the node has already been copied in the object's class but has no instance specific links"
+	"Second try in case there are no instance specific links. That may happen if a link for aNode in anObject has been 	installed then removed and if the object still has dedicated 	links."
 	compiledMethod := aNode methodNode method.
 	^ (anObject class methodDict
 		at: compiledMethod selector

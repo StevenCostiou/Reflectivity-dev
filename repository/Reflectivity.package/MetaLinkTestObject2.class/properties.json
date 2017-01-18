@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Reflectivity-Links",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"someInstVar2"
+	],
+	"name" : "MetaLinkTestObject2",
+	"type" : "normal"
+}

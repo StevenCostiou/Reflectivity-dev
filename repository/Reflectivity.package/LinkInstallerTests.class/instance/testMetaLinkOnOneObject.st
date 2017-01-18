@@ -1,4 +1,4 @@
-tests
+one ml - one object
 testMetaLinkOnOneObject
 	"Only one metalink for on object of a particular class. Other instances of this class must remain unaffected."
 
@@ -12,8 +12,7 @@ testMetaLinkOnOneObject
 	metalink selector: #value.
 	metalink metaObject: [ obj1 someInstVar: 1 ].
 	metalink control: #before.
-	metalink activateForObject: obj1.
-	metalink linkToNode: (obj1 class >> #someMethod) ast forObject: obj1.
+	(obj1 class >> #someMethod) ast link: metalink forObject: obj1.
 
 	"Only the object on which has been installed is affected"
 	obj1 someMethod.
@@ -22,7 +21,7 @@ testMetaLinkOnOneObject
 	self assert: obj2 someInstVar equals: nil.
 
 	"After removing the link, the object is not affected anymore"
-	metalink unlinkFromNode: (obj1 class >> #someMethod) ast forObject: obj1.
+	(obj1 class >> #someMethod) ast removeLink: metalink forObject: obj1.
 	obj1 someInstVar: nil.
 	obj1 someMethod.
 	obj2 someMethod.

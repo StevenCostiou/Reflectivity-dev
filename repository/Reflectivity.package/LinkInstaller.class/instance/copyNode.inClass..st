@@ -2,6 +2,7 @@ nodes
 copyNode: aNode inClass: anAnonymousClass
 	"For now we only copy methods nodes."
 	| compiledMethod reflectiveMethod |
+	self halt: 'Seems not to return a real copy of aNode...'.
 	compiledMethod := aNode methodNode method.
 	compiledMethod := compiledMethod copy.
 	compiledMethod methodClass: anAnonymousClass.

@@ -1,6 +1,6 @@
-tests
-testMultipleMetaLinksOnOneObject
-	"Only one metalink for on object of a particular class. Other instances of this class must remain unaffected."
+many ml - one object
+testTwoMetaLinksOneObject
+	"Two metalinks for one object of a particular class. Other instances of this class must remain unaffected."
 
 	| obj1 obj2 metalink metalink2 |
 	self cleanMetaLinkSystem.
