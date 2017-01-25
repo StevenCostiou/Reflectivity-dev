@@ -13,7 +13,7 @@ testOneMetaLinkClassAndObjects
 	
 	"First MetaLink affects all objects"
 	metalink := MetaLink new.
-	metalink selector: #iincrease.
+	metalink selector: #increase.
 	metalink metaObject: counter.
 	metalink control: #before.
 	(MetaLinkTestObject >> #someMethod) ast link: metalink.	
@@ -24,7 +24,7 @@ testOneMetaLinkClassAndObjects
 	metalink2 metaObject: counter.
 	metalink2 control: #after.
 	(MetaLinkTestObject >> #someMethod) ast link: metalink2 forObject: obj3.
-
+	
 	"Original method must execute as usual"
 	self assert: counter value equals: 0.
 	self assert: obj1 someMethod equals: 'hello world'.
@@ -38,14 +38,20 @@ testOneMetaLinkClassAndObjects
 	self assert: obj3 someMethod equals: 'hello world'.
 	self assert: counter value equals: 5.
 
-	"The link is removed from 2 out of 3 objects. It should stay active on this last object"
-	(obj1 class >> #someMethod) ast removeLink: metalink forObject: obj1.
-	(obj3 class >> #someMethod) ast removeLink: metalink forObject: obj3.
+	"The link is removed from the 3 objects."
+	(MetaLinkTestObject >> #someMethod) ast removeLink: metalink.	
 
 	"Original method must execute as usual"
 	self assert: obj1 someMethod equals: 'hello world'.
-	self assert: counter value equals: 3.
+	self assert: counter value equals: 5.
 	self assert: obj2 someMethod equals: 'hello world'.
-	self assert: counter value equals: 4.
-	self assert: obj3 someMethod equals: 'hello world 2'.
-	self assert: counter value equals: 4.
+	self assert: counter value equals: 5.
+
+	"The first link is still active on object 3 while it should not... or should it ?"
+	self assert: obj3 someMethod equals: 'hello world'.
+	self assert: counter value equals: 5.
+	(obj3 class >> #someMethod) ast removeLink: metalink2 forObject: obj3.
+
+	self assert: obj3 someMethod equals: 'hello world'.
+	self assert: counter value equals: 5.
+	

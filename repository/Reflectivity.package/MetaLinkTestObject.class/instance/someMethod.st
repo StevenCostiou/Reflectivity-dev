@@ -1,3 +1,3 @@
 API
-someMethod
+someMethod 
 	^'hello world'

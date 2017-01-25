@@ -1,12 +1,13 @@
 installation
 install: aMetaLink onNode: aNode forObject: anObject
 	| class anonClass nodesForObject ast |
+	aMetaLink activateForObject: anObject.
 	"Building the anonymous subclass if necessary.
 	Assumption is made that there is a single anonymous class for a given object."
 	class := anObject class.
 	anonClass := class isAnonymous
 		ifTrue: [ class ]
-		ifFalse: [ class newAnonymousSubclass ].
+		ifFalse: [ self newAnonymousSubclassFor: class ].
 
 	"Recovering the ast node in the anonymous class.
 	If it does not exists, it is copied from the original node in the anon class.

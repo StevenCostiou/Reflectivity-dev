@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"links",
-		"nodesForObjects"
+		"nodesForObjects",
+		"anonSubclassesRegistry"
 	],
 	"name" : "LinkInstaller",
 	"type" : "normal"
