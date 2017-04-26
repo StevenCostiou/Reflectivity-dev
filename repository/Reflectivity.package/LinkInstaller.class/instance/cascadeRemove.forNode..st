@@ -6,8 +6,13 @@ cascadeRemove: link forNode: aNode
 		we must ensure that this link is also removed in anonymous subclasses with the same node"
 
 	| class anonSubClasses |
-	class := aNode methodClass.
+	class := aNode methodNode methodClass.
 	class isAnonymous
 		ifTrue: [ ^ self ].
 	anonSubClasses := anonSubclassesRegistry at: class ifAbsent: [ ^ self ].
-	anonSubClasses do: [ :ac | ac compiledMethodAt: aNode selector ifPresent: [ :compiledMethod | compiledMethod ast removeLink: link ] ifAbsent: [  ] ]
+	anonSubClasses
+		do: [ :ac | 
+			ac
+				compiledMethodAt: aNode selector
+				ifPresent: [ :compiledMethod | compiledMethod ast removeLink: link ]
+				ifAbsent: [  ] ]
