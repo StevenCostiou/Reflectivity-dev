@@ -1,8 +1,9 @@
-installation
+links
 cascadeRemove: link forNode: aNode
-	"When:
+	"WARNING: find a better name for this method and its callers...
+	When:
 		- a link has been copied down in anonymous subclasses
-		- this link has to be remove in the original class
+		- this link has to be removed in the original class
 		we must ensure that this link is also removed in anonymous subclasses with the same node"
 
 	| class anonSubClasses |

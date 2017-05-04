@@ -1,0 +1,3 @@
+API
+someOtherMethod 
+	^0

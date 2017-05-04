@@ -1,4 +1,4 @@
-private
+anonymous classes
 newAnonymousSubclassFor: aClass
 	| anonSubclass |
 	anonSubclass := aClass newAnonymousSubclass.

@@ -1,6 +1,6 @@
 nodes
 copyNode: aNode inClass: anAnonymousClass
-	"For now we only copy methods nodes."
+	"4 may 2017: only methods nodes are considered."
 
 	| m anonAst |
 	m := anAnonymousClass compile: aNode source.
