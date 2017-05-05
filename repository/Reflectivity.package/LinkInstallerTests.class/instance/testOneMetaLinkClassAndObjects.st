@@ -47,11 +47,7 @@ testOneMetaLinkClassAndObjects
 	self assert: obj2 someMethod equals: 'hello world'.
 	self assert: counter value equals: 5.
 
-	"The first link is still active on object 3 while it should not... or should it ?"
+	"Object 3 still has its instance specific link"
 	self assert: obj3 someMethod equals: 'hello world'.
 	self assert: counter value equals: 7.
 	(obj3 class >> #someMethod) ast removeLink: metalink2 forObject: obj3.
-
-	self assert: obj3 someMethod equals: 'hello world'.
-	self assert: counter value equals: 7.
-	

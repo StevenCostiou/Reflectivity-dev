@@ -1,6 +1,6 @@
 removing links
 testRemovingMetaLinkOnOneObject
-	"When removing a link from an object anon subclass, the object looses the behavior brought by the link"
+	"When removing a link from an object, the object looses the behavior brought by the link"
 
 	| obj1 metalink |
 	self cleanMetaLinkSystem.

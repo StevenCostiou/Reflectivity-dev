@@ -5,3 +5,4 @@ link: aMetaLink
 	aMetaLink installOn: self.
 	self clearReflectivityAnnotations.
 	self methodNode method installLink: aMetaLink. 
+	aMetaLink linkToAnonymousNodesOf: self

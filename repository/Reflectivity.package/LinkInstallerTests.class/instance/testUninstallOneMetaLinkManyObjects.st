@@ -20,23 +20,14 @@ testUninstallOneMetaLinkManyObjects
 	(obj2 class >> #someMethod) ast link: metalink forObject: obj2.
 	(obj3 class >> #someMethod) ast link: metalink forObject: obj3.
 
-	"Original method must execute as usual"
-	self assert: counter equals: 0.
-	self assert: obj1 someMethod equals: 'hello world'.
-	self assert: counter equals: 1.
-	self assert: obj2 someMethod equals: 'hello world'.
-	self assert: counter equals: 2.
-	self assert: obj3 someMethod equals: 'hello world 2'.
-	self assert: counter equals: 3.
-
 	"The link is removed from 2 out of 3 objects. It should stay active on this last object"
 	(obj1 class >> #someMethod) ast removeLink: metalink forObject: obj1.
 	(obj3 class >> #someMethod) ast removeLink: metalink forObject: obj3.
 
-	"Original method must execute as usual"
+	"Original method must execute and only object 2 increases the counter"
 	self assert: obj1 someMethod equals: 'hello world'.
-	self assert: counter equals: 3.
+	self assert: counter equals: 0.
 	self assert: obj2 someMethod equals: 'hello world'.
-	self assert: counter equals: 4.
+	self assert: counter equals: 1.
 	self assert: obj3 someMethod equals: 'hello world 2'.
-	self assert: counter equals: 4.
+	self assert: counter equals: 1.

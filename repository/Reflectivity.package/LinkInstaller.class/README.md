@@ -1,32 +1,36 @@
-Object specific MetaLinks: we need to create anon subclasses per object, the subclass is shared between *all* links that are active for this class. We can only remove it when the last link is rem
+#TODO and notes
+- Should we replace method operations (copying, removing) by ast manipulation ?
+- Peer reviews... ?
+- For now, only method nodes can be affected by object specific links.
 
-anonSubclassesRegistry <Dictionary: (Class -> OrderedCollection of: AnonymousClass)>
+#document inst vars and their usage
+anonSubclassesRegistry <Dictionary: (Class -> WeakSet of: AnonymousClass)> This table contains for a given class all its anonymous subclasses for which there are instance specific links. Each anonymous class has exactly one instance.
 
-nodesForObjects
+nodesForObjects <WeakKeyDictionary (Object -> WeakSet of: RBMethodNode)>
 
-links
+links <WeakKeyDictionary (MetaLink -> WeakSet of: Object)> For each instance specific link, stores all objects it does affect. Used only for counting the number of objects affected by a given link. Maybe could be removed and replaced by a computation.
 
-Installing
+#document basic usage of the link installer
 
+#Installing
+When a link is put on a specific object, an anonymous subclass of the object's class is generated and the object is migrated to this subclass. There is a 1-1 mapping between objects an their anonymous class. That means that if we put two instance specific links on two objects of class A, these objects will migrate to two different anonymous subclasses of A. However, putting a new instance specific link to one of these objects will preserve its anonymous class and will not migrate the object to another subclass.
 	
-If aNode is in the original class of anObject and if there are class scoped links on this node,
-	they are installed in the new node of the anonymous subclass. Necessary to preserve the original instrumentation
-	of a node which are meant to be applied for all instances of the class.
+If aNode is in the original class of anObject and if there are class scoped links on this node,  they are installed in the new node of the anonymous subclass. It is necessary to preserve the original instrumentation of a node which are meant to be applied for all instances of the class.
 
-Uninstalling
+#Uninstalling
 We know we can remove a node in an anonymous subclass when there are no more instance specific links on this node. There may be "class scoped" links remaining, but the node can be removed because all these links are present on the superclass node that was copied down in the subclass.
 
-When there are no more nodes specific to a given object, the object is migrated back to its superclass. As there is only one anonymous subclass per object, it is expected that the anonymous subclass is garbaged.
+When there are no more nodes specific to a given object, the object is migrated back to its superclass. As there is only one anonymous subclass per object, it is expected that the anonymous subclass is garbaged and the object is now an instance of its original class.
 
-BUG:
-- when we add an object specific link to a node that already has links, we copy down the node with all the "class scoped links" in a anonymous subclass and add our object specific link to this node.
-- what happens if a new class scoped link is added in the original node ? It should be added to the instance specific node, otherwise behaviors of objects from the original class will be different from those of objects migrated to an anonymous subclass. That should not be.
-- same problem about source code changes in the original node.
-- solution: listen to source code changes and metalinks operation on ast nodes then propagate them to proper nodes in anonymous subclasses ?
-- note: the case is taken care of when removing such node... why not the same when adding ? Tests needed here !
+#Linking and unlinking subtleties
+As already said, when putting a link on a node for a specific object an anonymous subclass is generated  and the node is copied down from the origin class to its anonymous subclass. When adding or removing a new link to the node in the original class, we ensure that this link is also added/removed from all nodes copies in the corresponding anonymous subclasses.
+
+#Listening for code changes
+The link installer listens for method source code changes and  must update its anonymous classes nodes with those changes. Not done yet. See LinkInstaller >> #methodChanged:
+
+Also there is the problem of renaming a method in a class for which an anonymous subclass with a copy of this method has been made.
 
 
-Note: we should replace method operations (copying, removing) by ast manipulation.
 
 
 
