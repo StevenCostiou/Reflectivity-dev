@@ -1,3 +1,3 @@
 accessing
 someInstVar2
-	^ someInstVar2
+	^ someInstVar2 

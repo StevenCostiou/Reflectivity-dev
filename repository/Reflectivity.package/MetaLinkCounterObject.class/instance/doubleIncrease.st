@@ -1,3 +1,3 @@
-as yet unclassified
+adding
 doubleIncrease
 	self add: 2
