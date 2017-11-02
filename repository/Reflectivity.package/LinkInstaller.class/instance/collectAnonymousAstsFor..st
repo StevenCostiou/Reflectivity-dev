@@ -9,4 +9,6 @@ collectAnonymousAstsFor: aNode
 		ifTrue: [ ^ #() ].
 	anonSubClasses := anonSubclassesRegistry at: class ifAbsent: [ ^ #() ].
 	^ (anonSubClasses select: [ :ac | ac methodDictionary keys includes: aNode selector ])
-		collect: [ :ac | (ac compiledMethodAt: aNode selector) ast ]
+		collect: [ :ac | 
+			self flag: 'Search all nodes in this ast for the general case'.
+			(ac compiledMethodAt: aNode selector) ast. ]

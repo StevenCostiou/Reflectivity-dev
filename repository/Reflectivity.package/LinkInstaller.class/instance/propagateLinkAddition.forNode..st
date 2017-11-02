@@ -1,5 +1,5 @@
 links
-propagateLink: link forNode: aNode
+propagateLinkAddition: link forNode: aNode
 	"When:
 		- a node has been copied down in anonymous subclasses
 		- a link is added to this node in the original class

@@ -4,5 +4,4 @@ link: aMetaLink
 	(self propertyAt: #links ifAbsentPut: [ IdentitySet new ]) add: aMetaLink.
 	aMetaLink installOn: self.
 	self clearReflectivityAnnotations.
-	self methodNode method installLink: aMetaLink. 
-	aMetaLink linkToAnonymousNodesOf: self
+	self methodNode method installLink: aMetaLink

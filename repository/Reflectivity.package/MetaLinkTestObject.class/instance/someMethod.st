@@ -1,3 +1,3 @@
-API
+as yet unclassified
 someMethod 
-	^'hello world' 
+	^'hello world'  

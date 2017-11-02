@@ -1,5 +1,5 @@
 links
-propagateUnlink: link forNode: aNode
+propagateLinkRemoval: link forNode: aNode
 	"When:
 		- a link has been copied down in anonymous subclasses
 		- this link has to be removed in the original class

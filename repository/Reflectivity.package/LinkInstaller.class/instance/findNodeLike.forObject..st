@@ -1,5 +1,5 @@
 nodes
-findNode: aNode forObject: anObject
+findNodeLike: aNode forObject: anObject
 	| nodesForObject |
 	nodesForObject := nodesForObjects at: anObject ifAbsent: [ ^ nil ].
 	(nodesForObject includes: aNode)

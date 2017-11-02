@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"link"
+		"link",
+		"action",
+		"node"
 	],
 	"name" : "MetalinkChanged",
 	"type" : "normal"
