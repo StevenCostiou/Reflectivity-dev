@@ -5,7 +5,12 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"obj1",
+		"obj2",
+		"obj3",
+		"obj4"
+	],
 	"name" : "LinkInstallerTests",
 	"type" : "normal"
 }

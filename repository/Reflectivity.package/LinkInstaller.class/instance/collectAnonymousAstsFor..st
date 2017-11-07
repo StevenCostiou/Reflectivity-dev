@@ -3,12 +3,16 @@ collectAnonymousAstsFor: aNode
 	"Collects all ast nodes that are copies of aNode in anonymous subclasses
 	of aNode class."
 
-	| class anonSubClasses |
-	class := aNode methodNode methodClass.
+	| methodNode class anonSubClasses |
+	methodNode := aNode methodNode.
+	class := methodNode methodClass.
 	class isAnonymous
 		ifTrue: [ ^ #() ].
 	anonSubClasses := anonSubclassesRegistry at: class ifAbsent: [ ^ #() ].
-	^ (anonSubClasses select: [ :ac | ac methodDictionary keys includes: aNode selector ])
+	^ (anonSubClasses select: [ :ac | ac selectors includes: methodNode selector ])
 		collect: [ :ac | 
-			self flag: 'Search all nodes in this ast for the general case'.
-			(ac compiledMethodAt: aNode selector) ast. ]
+			| anonMethodNode |
+			anonMethodNode := (ac compiledMethodAt: aNode selector) ast.
+			aNode isMethod
+				ifTrue: [ anonMethodNode ]
+				ifFalse: [ self findSubNode: aNode in: anonMethodNode ] ]
