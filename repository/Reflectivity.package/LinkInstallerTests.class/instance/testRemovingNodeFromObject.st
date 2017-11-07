@@ -1,7 +1,7 @@
 removing links
 testRemovingNodeFromObject
 	| obj1 metalink metalink2 |
-	self cleanMetaLinkSystem.
+	
 	obj1 := MetaLinkTestObject new.
 
 	"Two links are put on the object which is migrated to an anon subclass."

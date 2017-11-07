@@ -4,7 +4,7 @@ testPropagateClassScopedLinks
 	they must also be added to all anonymous classes with copy of this node and link."
 
 	| obj1 metalink metalink2 node anonNode |
-	self cleanMetaLinkSystem.
+	
 	obj1 := MetaLinkTestObject new.
 	node := (MetaLinkTestObject >> #someMethod) ast.
 

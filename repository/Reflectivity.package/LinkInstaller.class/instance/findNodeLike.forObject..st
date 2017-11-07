@@ -2,6 +2,4 @@ nodes
 findNodeLike: aNode forObject: anObject
 	| nodesForObject |
 	nodesForObject := nodesForObjects at: anObject ifAbsent: [ ^ nil ].
-	(nodesForObject includes: aNode)
-		ifTrue: [ ^ aNode ].
-	^ nil
+	^ nodesForObject detect: [ :node | node = aNode ] ifNone: [ nil ]

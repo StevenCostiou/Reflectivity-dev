@@ -5,8 +5,7 @@ testOneMetaLinkClassAndObjects
 	- only one specific instance must be affected by the second MetaLink"
 
 	| counter obj1 obj2 obj3 metalink metalink2 |
-	self cleanMetaLinkSystem.
-	counter := MetaLinkCounterObject new.
+		counter := MetaLinkCounterObject new.
 	obj1 := MetaLinkTestObject new.
 	obj2 := MetaLinkTestObject new.
 	obj3 := MetaLinkTestObject new.

@@ -1,4 +1,4 @@
-links
+nodes
 collectAnonymousAstsFor: aNode
 	"Collects all ast nodes that are copies of aNode in anonymous subclasses
 	of aNode class."

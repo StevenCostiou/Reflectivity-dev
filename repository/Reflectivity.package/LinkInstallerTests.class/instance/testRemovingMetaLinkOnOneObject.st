@@ -3,7 +3,7 @@ testRemovingMetaLinkOnOneObject
 	"When removing a link from an object, the object looses the behavior brought by the link"
 
 	| obj1 metalink |
-	self cleanMetaLinkSystem.
+	
 	obj1 := MetaLinkTestObject new.
 
 	"The MetaLink must change the someInstVar value to 1 before #someMethod"

@@ -7,10 +7,6 @@ copyNode: aNode inClass: anAnonymousClass
 	anAnonymousClass compile: methodNode source.
 	node := (anAnonymousClass >> methodNode selector) ast.
 	self linkAllFromNode: methodNode into: node.
-	node = methodNode
+	aNode = methodNode
 		ifTrue: [ ^ node ].
-	self
-		flag:
-			'Should return the copied node and not the method node (except if aNode was a method node)'.
-	self flag: 'Should manage the copy of all links for all nodes in the method'.
 	^ node allChildren detect: [ :n | n = aNode ]

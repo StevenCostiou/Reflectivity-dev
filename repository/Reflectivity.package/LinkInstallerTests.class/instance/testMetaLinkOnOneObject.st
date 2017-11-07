@@ -3,7 +3,6 @@ testMetaLinkOnOneObject
 	"Only one metalink for on object of a particular class. Other instances of this class must remain unaffected."
 
 	| obj1 obj2 metalink |
-	self cleanMetaLinkSystem.
 	obj1 := MetaLinkTestObject new.
 	obj2 := MetaLinkTestObject new.
 

@@ -5,7 +5,7 @@ testUninstallOneMetaLinkManyObjects
 		- objects must recover their original classes"
 
 	| counter obj1 obj2 obj3 metalink |
-	self cleanMetaLinkSystem.
+	
 	counter := 0.
 	obj1 := MetaLinkTestObject new.
 	obj2 := MetaLinkTestObject new.

@@ -1,7 +1,7 @@
 ml anon classes
 testMetaLinkWithAnonymousClasses
 	| obj1 obj2 metalink |
-	self cleanMetaLinkSystem.
+	
 	obj1 := MetaLinkTestObject new.
 	obj2 := MetaLinkTestObject new.
 

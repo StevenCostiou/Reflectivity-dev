@@ -3,7 +3,7 @@ testOneMetaLinkManyObjects
 	"Multiple MetaLinks for one object of a particular class. Other instances of this class must remain unaffected."
 
 	| counter obj1 obj2 obj3 metalink |
-	self cleanMetaLinkSystem.
+	
 	counter := 0.
 	obj1 := MetaLinkTestObject new.
 	obj2 := MetaLinkTestObject new.
