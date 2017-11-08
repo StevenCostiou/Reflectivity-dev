@@ -1,4 +1,4 @@
-updating links
+links - updating
 testPropagateClassScopedLinks
 	"When class scoped links exist on a node,
 	they must also be added to all anonymous classes with copy of this node and link."

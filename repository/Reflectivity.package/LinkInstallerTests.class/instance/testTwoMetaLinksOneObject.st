@@ -1,4 +1,4 @@
-many ml - one object
+links - installing
 testTwoMetaLinksOneObject
 	"Two metalinks for one object of a particular class. Other instances of this class must remain unaffected."
 

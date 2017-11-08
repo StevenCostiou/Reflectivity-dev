@@ -1,4 +1,4 @@
-updating links
+links - updating
 testPropagateClassScopedLinksRemovalFromMethodNode
 	"When removing a class scoped link from a method node,
 	it must also be removed from all anonymous classes with copy of this node and link."

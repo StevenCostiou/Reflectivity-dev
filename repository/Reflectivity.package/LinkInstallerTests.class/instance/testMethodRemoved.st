@@ -1,4 +1,4 @@
-updating links
+links - updating
 testMethodRemoved
 	"When removing a method for which there was an object specific link,
 	all links must be removed"

@@ -1,4 +1,4 @@
-ml anon classes
+links - installing
 testMetaLinkWithAnonymousClasses
 	| obj1 obj2 metalink |
 	

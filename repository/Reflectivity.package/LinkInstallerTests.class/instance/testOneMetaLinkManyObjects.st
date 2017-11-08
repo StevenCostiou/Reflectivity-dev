@@ -1,4 +1,4 @@
-one ml - many objects
+links - installing
 testOneMetaLinkManyObjects
 	"Multiple MetaLinks for one object of a particular class. Other instances of this class must remain unaffected."
 

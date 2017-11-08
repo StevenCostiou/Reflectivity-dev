@@ -1,4 +1,4 @@
-one ml - many objects
+links - installing
 testOneMetaLinkClassAndObjects
 	"Installs a MetaLink on one class. Installs another MetaLink on one instance of this class.
 	- all instances of the class must be affected by the first MetaLink

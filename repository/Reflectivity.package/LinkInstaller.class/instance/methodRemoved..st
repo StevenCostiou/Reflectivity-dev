@@ -1,5 +1,9 @@
 updating
 methodRemoved: aMethodRemoved
-	aMethodRemoved methodOrigin isAnonymous
+	| methodNode methodClass anonClasses |
+	methodNode := aMethodRemoved methodRemoved compiledMethod ast.
+	methodClass := aMethodRemoved methodOrigin.
+	methodClass isAnonymous
 		ifTrue: [ ^ self ].
-	self halt
+	anonClasses := anonSubclassesRegistry at: methodClass ifAbsent: [ ^ self ].
+	self removeAllAnonymousNodesIn: methodNode fromClasses: anonClasses

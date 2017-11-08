@@ -1,4 +1,4 @@
-updating links
+links - updating
 testMethodModified
 	"When modifying a method for which there was an object specific link,
 	all links must be removed"

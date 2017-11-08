@@ -1,4 +1,4 @@
-updating links
+links - updating
 testPropagateNewClassScopedLinksOnMethodNode
 	"When adding a class scoped link from a node,
 	it must also be added to all anonymous classes with copy of this node and link."

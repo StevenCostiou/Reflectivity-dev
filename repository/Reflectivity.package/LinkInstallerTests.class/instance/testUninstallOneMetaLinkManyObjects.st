@@ -1,4 +1,4 @@
-one ml - many objects
+links - installing
 testUninstallOneMetaLinkManyObjects
 	"Globally uninstalling a link installed on many objects
 		- link should not be active anymore

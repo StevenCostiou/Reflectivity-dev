@@ -1,4 +1,4 @@
-removing links
+links - removing
 testRemovingNodeFromObject
 	| obj1 metalink metalink2 |
 	

@@ -1,4 +1,4 @@
-one ml - one object
+links - installing
 testMetaLinkOnOneObject
 	"Only one metalink for on object of a particular class. Other instances of this class must remain unaffected."
 
