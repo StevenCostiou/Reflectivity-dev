@@ -6,5 +6,4 @@ removeLink: aMetaLink
 	self decreaseLinkCount.
 	self linkCount = 0
 		ifTrue: [ self destroyTwin ].
-	SystemAnnouncer uniqueInstance
-		announce: (MetalinkChanged linkRemoved: aMetaLink fromNode: self ast)
+	SystemAnnouncer uniqueInstance announce: (MetalinkChanged new link: aMetaLink)

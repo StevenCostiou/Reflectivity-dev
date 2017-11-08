@@ -1,0 +1,3 @@
+initialization
+unsubscribeFromAnnouncers
+	SystemAnnouncer uniqueInstance unsubscribe: self

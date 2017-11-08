@@ -1,4 +1,4 @@
-nodes
+links - count
 instanceSpecificsLinksCountForNode: aNode
 	| nodeLinks |
 	nodeLinks := aNode links ifNil: [ ^ 0 ].

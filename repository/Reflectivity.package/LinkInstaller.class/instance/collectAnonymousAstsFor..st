@@ -12,7 +12,7 @@ collectAnonymousAstsFor: aNode
 	^ (anonSubClasses select: [ :ac | ac selectors includes: methodNode selector ])
 		collect: [ :ac | 
 			| anonMethodNode |
-			anonMethodNode := (ac compiledMethodAt: aNode selector) ast.
+			anonMethodNode := (ac compiledMethodAt: methodNode selector) ast.
 			aNode isMethod
 				ifTrue: [ anonMethodNode ]
 				ifFalse: [ self findSubNode: aNode in: anonMethodNode ] ]
