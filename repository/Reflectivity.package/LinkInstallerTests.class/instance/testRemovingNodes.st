@@ -6,10 +6,10 @@ testRemovingNodes
 	metalink2 := MetaLink new.
 	
 	(MetaLinkTestObject >> #someMethod) ast allChildren first link: metalink forObject: obj1.
-	(MetaLinkTestObject >> #someMethod) ast allChildren last link: metalink2 forObject: obj1.
+	(MetaLinkTestObject >> #someMethod) ast allChildren fourth link: metalink2 forObject: obj1.
 	
 	node1 := (MetaLinkTestObject >> #someMethod) ast allChildren first.
-	node2 := (MetaLinkTestObject >> #someMethod) ast allChildren last.
+	node2 := (MetaLinkTestObject >> #someMethod) ast allChildren fourth.
 	
 	node1 removeLink: metalink forObject: obj1.
 	self assert: obj1 class isAnonymous.

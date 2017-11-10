@@ -4,8 +4,7 @@ copyNode: aNode inClass: anAnonymousClass
 
 	| methodNode node |
 	methodNode := aNode methodNode.
-	anAnonymousClass compile: methodNode source.
-	node := (anAnonymousClass >> methodNode selector) ast.
+	node := self compileMethodNodeFor: aNode in: anAnonymousClass.
 	self linkAllFromNode: methodNode into: node.
 	aNode = methodNode
 		ifTrue: [ ^ node ].

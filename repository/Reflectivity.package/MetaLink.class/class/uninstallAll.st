@@ -2,5 +2,5 @@ cleanup
 uninstallAll
 	<script>
 	self allInstances do: #uninstall.
-	linkInstaller unsubscribeFromAnnouncers.
+	self linkInstaller unsubscribeFromAnnouncers.
 	linkInstaller := nil

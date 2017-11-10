@@ -1,3 +1,3 @@
 as yet unclassified
-someMethod 
-	^'hello world'  
+someMethod
+	^ 'hello world' asString

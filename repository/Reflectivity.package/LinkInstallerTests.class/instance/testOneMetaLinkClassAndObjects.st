@@ -4,12 +4,9 @@ testOneMetaLinkClassAndObjects
 	- all instances of the class must be affected by the first MetaLink
 	- only one specific instance must be affected by the second MetaLink"
 
-	| counter obj1 obj2 obj3 metalink metalink2 |
-		counter := MetaLinkCounterObject new.
-	obj1 := MetaLinkTestObject new.
-	obj2 := MetaLinkTestObject new.
-	obj3 := MetaLinkTestObject new.
-	
+	| counter metalink metalink2 |
+	counter := MetaLinkCounterObject new.
+
 	"First MetaLink affects all objects"
 	metalink := MetaLink new.
 	metalink selector: #increase.
