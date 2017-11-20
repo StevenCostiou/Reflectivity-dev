@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Reflectivity-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"obj1",
+		"obj2",
+		"obj3",
+		"obj4"
+	],
+	"name" : "LinkInstallerTests",
+	"type" : "normal"
+}

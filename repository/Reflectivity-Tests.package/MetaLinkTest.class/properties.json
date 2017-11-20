@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "MarcusDenker 3/1/2015 18:23",
+	"super" : "TestCase",
+	"category" : "Reflectivity-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MetaLinkTest",
+	"type" : "normal"
+}

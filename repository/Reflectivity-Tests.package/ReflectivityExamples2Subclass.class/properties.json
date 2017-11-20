@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "ReflectivityExamples2",
+	"category" : "Reflectivity-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ReflectivityExamples2Subclass",
+	"type" : "normal"
+}
