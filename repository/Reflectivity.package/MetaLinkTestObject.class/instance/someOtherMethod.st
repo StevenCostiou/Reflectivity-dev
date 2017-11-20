@@ -1,3 +1,0 @@
-API
-someOtherMethod 
-	^0 
