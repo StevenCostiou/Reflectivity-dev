@@ -1,0 +1,1 @@
+Note that for API with options the same methods are called for objects and classes, so the test is made only once.
