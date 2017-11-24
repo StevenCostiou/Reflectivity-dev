@@ -10,7 +10,8 @@
 		"persistenceType",
 		"isInstanceSpecific",
 		"slotOrVarClass",
-		"slotOrVarMethod"
+		"slotOrVarMethod",
+		"link"
 	],
 	"name" : "PermaLink",
 	"type" : "normal"

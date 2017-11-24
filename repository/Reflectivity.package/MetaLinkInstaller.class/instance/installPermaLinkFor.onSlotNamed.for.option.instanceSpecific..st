@@ -1,6 +1,7 @@
 permalinks
 installPermaLinkFor: aMetaLink onSlotNamed: aSlotName for: aClassOrObject option: option instanceSpecific: instanceSpecific
 	| slot |
+	self flag: 'Too much parameters, everywhere !'.
 	slot := MetalinkTargetResolver slotNamed: aSlotName for: aClassOrObject.
 	self
 		permaLinkOn: aMetaLink

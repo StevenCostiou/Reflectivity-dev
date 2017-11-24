@@ -8,7 +8,8 @@
 	"instvars" : [
 		"links",
 		"permalinks",
-		"classes"
+		"classes",
+		"permanentTargets"
 	],
 	"name" : "MetaLinkRegistry",
 	"type" : "normal"

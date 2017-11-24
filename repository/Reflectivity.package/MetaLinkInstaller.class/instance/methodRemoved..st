@@ -6,4 +6,3 @@ methodRemoved: aMethodRemoved
 	methodClass isAnonymous
 		ifTrue: [ ^ self ].
 	self removeAllAnonymousNodesIn: methodNode fromAnonSubclassesOf: methodClass
-	"	self reinstallPermaLinksForMethod: aMethodRemoved methodRemoved"

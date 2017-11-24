@@ -1,6 +1,7 @@
 permalinks
 installPermaLinkFor: aMetaLink onClassVarNamed: aClassVarName for: aClassOrObject option: option instanceSpecific: instanceSpecific
 	| classVar |
+	self flag: 'Too much parameters, everywhere !'.
 	classVar := MetalinkTargetResolver
 		classVariableNamed: aClassVarName
 		for: aClassOrObject.

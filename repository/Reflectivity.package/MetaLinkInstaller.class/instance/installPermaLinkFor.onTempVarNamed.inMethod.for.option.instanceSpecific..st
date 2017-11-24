@@ -1,6 +1,7 @@
 permalinks
 installPermaLinkFor: aMetaLink onTempVarNamed: aTempName inMethod: aMethodName for: aClassOrObject option: option instanceSpecific: instanceSpecific
 	| temp |
+	self flag: 'Too much parameters, everywhere !'.
 	temp := MetalinkTargetResolver
 		lookupTemporaryNamed: aTempName
 		inMethod: aMethodName

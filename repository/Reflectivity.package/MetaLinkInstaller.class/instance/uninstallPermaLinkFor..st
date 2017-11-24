@@ -1,0 +1,3 @@
+permalinks
+uninstallPermaLinkFor: link
+	linksRegistry unregisterPermaLinksFor: link
