@@ -4,8 +4,12 @@
 	"category" : "Reflectivity-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classvars" : [
+		"classVar"
+	],
+	"instvars" : [
+		"instVar"
+	],
 	"name" : "ReflectivityExamples2",
 	"type" : "normal"
 }

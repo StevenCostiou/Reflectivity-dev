@@ -8,7 +8,7 @@ testPropagateLinksOnRBProgramNode
 		
 	instance := ReflectivityExamples new.
 	varNode link: link2 forObject: instance.
-	objectSpecificVarNode := link2 linkInstaller findNodeLike: varNode forObject: instance.
+	objectSpecificVarNode := link2 linkInstaller linkToNodesMapper findNodeLike: varNode forObject: instance.
 
 	self assert: varNode links size equals: 1.
 	self assert: varNode links asArray first == link.

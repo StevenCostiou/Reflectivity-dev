@@ -1,0 +1,3 @@
+slots and vars
+testSlotOrVarLinksRemainAfterMethodModification
+	self assert: false
