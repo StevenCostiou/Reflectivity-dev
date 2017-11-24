@@ -1,3 +1,3 @@
-slots and vars
+permalinks
 testSlotOrVarLinksRemainAfterMethodModification
 	self assert: false

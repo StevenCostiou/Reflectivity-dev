@@ -1,4 +1,4 @@
-slots and vars
+permalinks
 testLinkOnClassVar
 	|methodNode link|
 	methodNode := (ReflectivityExamples2 >> #methodWithClassVarAccess) ast.

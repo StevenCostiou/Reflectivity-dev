@@ -1,4 +1,4 @@
-slots and vars
+permalinks
 testLinkOnTempVar
 	| methodNode link |
 	methodNode := (ReflectivityExamples2 >> #methodWithTempVarAccess) ast.
