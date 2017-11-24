@@ -1,10 +1,8 @@
 *Reflectivity
 link: aMetaLink toTemporaryNamed: aTempVarName inMethod: aMethodName option: option
-	self
-		link: aMetaLink
-		toNodes:
-			(MetalinkTargetResolver
-				temporaryNamed: aTempVarName
-				inMethod: aMethodName
-				for: self
-				option: option)
+	aMetaLink
+		installOnTempVarNamed: aTempVarName
+		inMethod: aMethodName
+		for: self
+		option: option
+		instanceSpecific: self intanceSpecificMetaLinksAvailable

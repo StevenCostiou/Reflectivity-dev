@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "StevenCostiou 11/24/2017 16:40",
+	"super" : "Object",
+	"category" : "Reflectivity-Installer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"classes",
+		"migratedObjects"
+	],
+	"name" : "MetaLinkAnonymousClassBuilder",
+	"type" : "normal"
+}

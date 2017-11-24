@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "StevenCostiou 11/24/2017 12:53",
+	"super" : "Object",
+	"category" : "Reflectivity-Installer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nodesForObjects",
+		"objectsForNodes"
+	],
+	"name" : "MetaLinkNodesMapper",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "StevenCostiou 5/5/2017 19:06",
+	"super" : "Object",
+	"category" : "Reflectivity-Installer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"linksRegistry",
+		"anonSubclassesBuilder",
+		"linkToNodesMapper"
+	],
+	"name" : "MetaLinkInstaller",
+	"type" : "normal"
+}

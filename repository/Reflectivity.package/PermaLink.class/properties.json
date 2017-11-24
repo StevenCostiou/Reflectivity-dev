@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "StevenCostiou 11/21/2017 11:40",
+	"super" : "Object",
+	"category" : "Reflectivity-Installer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slotOrVariable",
+		"persistenceType",
+		"isInstanceSpecific",
+		"slotOrVarClass",
+		"slotOrVarMethod"
+	],
+	"name" : "PermaLink",
+	"type" : "normal"
+}

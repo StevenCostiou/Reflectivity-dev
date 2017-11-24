@@ -1,4 +1,4 @@
 accessing
 linkInstaller
 	^linkInstaller 
-		ifNil: [ linkInstaller := LinkInstaller new ]
+		ifNil: [ linkInstaller := MetaLinkInstaller new ]

@@ -1,4 +1,5 @@
 installing
 uninstall
-	nodes do: [:node | node removeLink: self].
-	nodes removeAll.
+	self linkInstaller uninstallFromAllAnonymousNodes: self.
+	nodes do: [ :node | node removeLink: self ].
+	nodes removeAll

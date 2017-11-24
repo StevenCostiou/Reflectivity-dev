@@ -1,0 +1,3 @@
+initalize
+initialize
+	isInstanceSpecific := false

@@ -1,0 +1,3 @@
+updating
+methodAdded: aMethodAdded
+	self reinstallPermaLinksForMethod: aMethodAdded methodAdded
