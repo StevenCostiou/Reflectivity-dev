@@ -6,7 +6,7 @@ permaLinkOn: aMetaLink for: aClassOrObject target: aSlotOrVar method: aMethodOrN
 	permaLink persistenceType: option.
 	permaLink slotOrVariable: aSlotOrVar.
 	permaLink isInstanceSpecific: instanceSpecific.
-	permaLink slotOrVarClass: (MetalinkTargetResolver classFor: aClassOrObject).
+	permaLink slotOrVarClass: aClassOrObject.
 	permaLink slotOrVarMethod: aMethodOrNil.
-	permaLink link: aMetaLink. 
+	permaLink link: aMetaLink.
 	linksRegistry registerPermaLink: permaLink

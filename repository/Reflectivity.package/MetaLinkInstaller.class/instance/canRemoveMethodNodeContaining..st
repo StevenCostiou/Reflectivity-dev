@@ -1,4 +1,4 @@
-links
+nodes
 canRemoveMethodNodeContaining: aNode
 	| methodNode allNodes |
 	methodNode := aNode methodNode.

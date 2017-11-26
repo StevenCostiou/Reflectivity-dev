@@ -1,3 +1,3 @@
 accessing
 slotOrVarClass
-	^ slotOrVarClass
+	^ (MetalinkTargetResolver classFor: slotOrVarClass)

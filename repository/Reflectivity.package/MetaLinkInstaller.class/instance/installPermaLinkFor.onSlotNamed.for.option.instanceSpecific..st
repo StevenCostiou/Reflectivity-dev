@@ -10,6 +10,4 @@ installPermaLinkFor: aMetaLink onSlotNamed: aSlotName for: aClassOrObject option
 		method: nil
 		option: option
 		instanceSpecific: instanceSpecific.
-	aClassOrObject
-		link: aMetaLink
-		toNodes: (MetalinkTargetResolver resolveASTLookupFor: slot option: option)
+	aClassOrObject link: aMetaLink toNodes: (MetalinkTargetResolver resolveASTLookupFor: slot option: option)

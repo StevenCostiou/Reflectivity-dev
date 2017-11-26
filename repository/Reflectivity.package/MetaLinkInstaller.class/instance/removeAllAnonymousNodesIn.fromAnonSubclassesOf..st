@@ -4,6 +4,7 @@ removeAllAnonymousNodesIn: methodNode fromAnonSubclassesOf: aClass
 	If they exist, they are uninstalled."
 
 	| selector anonClassesWithSelector |
+	self flag: 'What about permalinks ?'.
 	selector := methodNode selector.
 	anonClassesWithSelector := anonSubclassesBuilder allSubclassesOf: aClass withSelector: selector.
 	anonClassesWithSelector
