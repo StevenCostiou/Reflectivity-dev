@@ -2,8 +2,8 @@ tests
 testFindTemporaryVariableWithOptions
 	| temp readNodes writeNodes |
 	temp := ReflectivityExamples >> #exampleIfTrueIfFalse temporaryVariableNamed: #t.
-	readNodes := temp readNodes.
-	writeNodes := temp assignmentNodes.
+	readNodes := temp readNodes asIdentitySet.
+	writeNodes := temp assignmentNodes asIdentitySet.
 	self
 		assert:
 			(MetalinkTargetResolver
@@ -24,4 +24,4 @@ testFindTemporaryVariableWithOptions
 				temporaryNamed: #t
 				inMethod: #exampleIfTrueIfFalse
 				for: ReflectivityExamples
-				option: #all) = (Array with: writeNodes with: readNodes) flattened
+				option: #all) = (Array with: writeNodes with: readNodes) flattened asIdentitySet
