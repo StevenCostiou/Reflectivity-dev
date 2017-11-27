@@ -16,4 +16,6 @@ testMethodModified
 	migrate back the object to its original class"
 	ReflectivityExamples compile: ('methodToBeModified ^', Time now printString printString).
 	self deny: obj1 class isAnonymous.
-	self assert: obj1 class == ReflectivityExamples
+	self assert: obj1 class == ReflectivityExamples.
+	self deny: metalink hasNodes.
+	self assert: (metalink linkInstaller linkToNodesMapper findNodeLike: node forObject: obj1) isNil. 

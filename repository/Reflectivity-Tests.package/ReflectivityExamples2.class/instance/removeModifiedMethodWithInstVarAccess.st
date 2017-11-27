@@ -1,0 +1,3 @@
+removing
+removeModifiedMethodWithInstVarAccess
+	self class removeSelector: #modifiedMethodWithInstVarAccess

@@ -14,4 +14,5 @@ testPropagateClassScopedLinks
 	
 	anonNode := metalink linkInstaller findSubNode: node in: (obj1 class >> #exampleIfTrueIfFalse) ast.
 	
+	self assert: anonNode links size equals: 2.
 	self assert: (anonNode links includes: metalink)
