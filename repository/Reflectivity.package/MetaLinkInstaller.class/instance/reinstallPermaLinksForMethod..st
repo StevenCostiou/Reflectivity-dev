@@ -13,7 +13,6 @@ reinstallPermaLinksForMethod: method
 				do: [ :node | 
 					pl isInstanceSpecific
 						ifTrue: [ | instances |
-							self halt.
 							instances := (linksRegistry objectsForLink: pl link) select: [ :i | i class superclass = class ].
 							instances do: [ :instance | node link: pl link forObject: instance ] ]
 						ifFalse: [ node link: pl link ] ] ]

@@ -9,4 +9,4 @@ permaLinkOn: aMetaLink for: aClassOrObject target: aSlotOrVar method: aMethodOrN
 	permaLink slotOrVarClass: aClassOrObject.
 	permaLink slotOrVarMethod: aMethodOrNil.
 	permaLink link: aMetaLink.
-	linksRegistry registerPermaLink: permaLink
+	^ permaLink

@@ -17,8 +17,8 @@ removePermaLinksNodesReferencesFor: aMethodNode
 	permalinks
 		do: [ :permalink | 
 			| methodNodes |
-			methodNodes := Array with: aMethodNode.
+			methodNodes := IdentitySet with: aMethodNode.
 			permalink isInstanceSpecific
-				ifTrue:
-					[ methodNodes addAll: (((anonSubclassesBuilder allSubclassesOf: class withSelector: selector) select: [ :c | c selectors includes: selector ]) collect: [ :method | method ast ]) ].
+				ifTrue: [ methodNodes
+						addAll: (((anonSubclassesBuilder allSubclassesOf: class withSelector: selector) select: [ :c | c selectors includes: selector ]) collect: [ :anonClass | (anonClass >> selector) ast ]) ].
 			methodNodes do: [ :methodNode | self recursiveRemoveMethodNode: methodNode fromPermaLinks: permalink ] ]

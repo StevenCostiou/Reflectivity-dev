@@ -1,17 +1,16 @@
 permalinks
 installPermaLinkFor: aMetaLink onClassVarNamed: aClassVarName for: aClassOrObject option: option instanceSpecific: instanceSpecific
-	| classVar |
+	| classVar permalink |
 	self flag: 'Too much parameters, everywhere !'.
-	classVar := MetalinkTargetResolver
-		classVariableNamed: aClassVarName
-		for: aClassOrObject.
-	self
+	classVar := MetalinkTargetResolver classVariableNamed: aClassVarName for: aClassOrObject.
+	permalink := self
 		permaLinkOn: aMetaLink
 		for: aClassOrObject
 		target: classVar
 		method: nil
 		option: option
 		instanceSpecific: instanceSpecific.
-	aClassOrObject
-		link: aMetaLink
-		toNodes: (MetalinkTargetResolver resolveASTLookupFor: classVar option: option)
+	(linksRegistry canReinstallPermaLink: permalink)
+		ifFalse: [ ^ self ].
+	linksRegistry registerPermaLink: permalink.
+	aClassOrObject link: aMetaLink toNodes: (MetalinkTargetResolver resolveASTLookupFor: classVar option: option)

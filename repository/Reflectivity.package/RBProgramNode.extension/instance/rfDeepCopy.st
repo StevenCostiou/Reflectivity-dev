@@ -1,3 +1,0 @@
-*Reflectivity
-rfDeepCopy
-	^self copy

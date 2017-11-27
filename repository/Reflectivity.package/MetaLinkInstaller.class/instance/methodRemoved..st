@@ -5,5 +5,7 @@ methodRemoved: aMethodRemoved
 	self removePermaLinksNodesReferencesFor: methodNode.
 	methodClass := aMethodRemoved methodOrigin.
 	methodClass isAnonymous
-		ifTrue: [ ^ self ].	
-	self removeAllAnonymousNodesIn: methodNode fromAnonSubclassesOf: methodClass.
+		ifTrue: [ ^ self ].
+	self
+		removeAllAnonymousNodesIn: methodNode
+		fromAnonSubclassesOf: methodClass
