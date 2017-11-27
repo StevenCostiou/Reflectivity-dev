@@ -1,2 +1,0 @@
-object api
-testLinkObjectToSlot

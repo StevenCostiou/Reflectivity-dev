@@ -1,2 +1,0 @@
-object api
-testLinkObjectToClassVar
