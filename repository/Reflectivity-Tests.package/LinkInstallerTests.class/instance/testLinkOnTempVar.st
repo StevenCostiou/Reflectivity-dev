@@ -4,9 +4,7 @@ testLinkOnTempVar
 	methodNode := (ReflectivityExamples2 >> #methodWithTempVarAccess) ast.
 	link := MetaLink new.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: ReflectivityExamples2
 		option: #read
@@ -18,9 +16,7 @@ testLinkOnTempVar
 	link uninstall.
 	self assert: link nodes isEmpty.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: ReflectivityExamples2
 		option: #write
@@ -32,9 +28,7 @@ testLinkOnTempVar
 	link uninstall.
 	self assert: link nodes isEmpty.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: ReflectivityExamples2
 		option: #all

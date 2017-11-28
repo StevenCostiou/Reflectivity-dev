@@ -6,7 +6,7 @@ testSlotOrVarLinksAddedAfterMethodAddition
 	ReflectivityExamples2 new removeNewMethodWithInstVarAccess.
 	
 	link := MetaLink new.	
-	link linkInstaller installPermaLinkFor: link onSlotNamed: #instVar for: ReflectivityExamples2 option: #all instanceSpecific: false.
+	link installOnSlotNamed: #instVar for: ReflectivityExamples2 option: #all instanceSpecific: false.
 
 	self assert: link nodes size equals: 4.
 	

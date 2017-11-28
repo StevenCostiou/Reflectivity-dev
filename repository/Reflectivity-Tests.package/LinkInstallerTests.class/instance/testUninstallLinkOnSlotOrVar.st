@@ -4,9 +4,7 @@ testUninstallLinkOnSlotOrVar
 	link := MetaLink new.
 	linkRegistry := link linkInstaller linksRegistry.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onSlotNamed: #instVar
+	link installOnSlotNamed: #instVar
 		for: ReflectivityExamples2
 		option: #all
 		instanceSpecific: false.
@@ -14,9 +12,7 @@ testUninstallLinkOnSlotOrVar
 	self assert: link nodes isEmpty.
 	self assert: (linkRegistry permaLinksFor:link) isEmpty.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onClassVarNamed: #classVar
+	link installOnClassVarNamed: #classVar
 		for: ReflectivityExamples2 new
 		option: #all
 		instanceSpecific: false.

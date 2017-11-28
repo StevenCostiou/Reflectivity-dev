@@ -7,10 +7,10 @@ testPermaLinkNotInstalledOnObjectIfExistsInClass
 	
 	link := MetaLink new.	
 
-	link linkInstaller installPermaLinkFor: link onSlotNamed: #instVar for: ReflectivityExamples2 option: #all instanceSpecific: true.
+	link installOnSlotNamed: #instVar for: ReflectivityExamples2 option: #all instanceSpecific: true.
 	self assert: link nodes size equals: 8.	
 			
-	link linkInstaller installPermaLinkFor: link onSlotNamed: #instVar for: obj option: #all instanceSpecific: true.
+	link installOnSlotNamed: #instVar for: obj option: #all instanceSpecific: true.
 	self assert: link nodes size equals: 8.		
 	
 	link uninstall.

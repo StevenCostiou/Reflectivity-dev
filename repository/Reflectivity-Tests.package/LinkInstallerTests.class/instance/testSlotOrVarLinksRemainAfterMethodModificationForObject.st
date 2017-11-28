@@ -7,7 +7,7 @@ testSlotOrVarLinksRemainAfterMethodModificationForObject
 	methodNode := (ReflectivityExamples2 >> #modifiedMethodWithInstVarAccess) ast.
 	
 	link := MetaLink new.	
-	link linkInstaller installPermaLinkFor: link onSlotNamed: #instVar for: obj option: #all instanceSpecific: true.
+	link installOnSlotNamed: #instVar for: obj option: #all instanceSpecific: true.
 
 	self assert: link nodes size equals: 12.
 	"self halt."

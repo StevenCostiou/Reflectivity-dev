@@ -5,9 +5,7 @@ testLinkOnTempVarForObject
 	link := MetaLink new.
 	obj := ReflectivityExamples2 new.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: obj
 		option: #read
@@ -19,9 +17,7 @@ testLinkOnTempVarForObject
 	link uninstall.
 	self assert: link nodes isEmpty.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: obj
 		option: #write
@@ -33,9 +29,7 @@ testLinkOnTempVarForObject
 	link uninstall.
 	self assert: link nodes isEmpty.
 	
-	link linkInstaller
-		installPermaLinkFor: link
-		onTempVarNamed: #temp
+	link installOnTempVarNamed: #temp
 		inMethod: #methodWithTempVarAccess
 		for: obj
 		option: #all
