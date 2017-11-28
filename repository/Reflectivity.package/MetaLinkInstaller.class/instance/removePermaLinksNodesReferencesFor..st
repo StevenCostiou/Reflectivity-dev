@@ -1,24 +1,18 @@
 permalinks
 removePermaLinksNodesReferencesFor: aMethodNode
-	"We have to find all anonymous classes with aMethodNode copy which is going to be removed.
-	On all these copies, we have to find all permalinks from which we must remove every node that is
-	going to be removed.
-	Look for my senders for better understanding."
+	"Remove all permalink references of permalinks for aMethodNode (if any).
+	It includes all permalink installed on any child of aMethodNode or
+	any copy of aMethodNode in anonymous classes (including their children)."
 
-	| class selector permalinks |
+	| class anonClasses selector permalinks |
 	class := aMethodNode methodClass.
 	selector := aMethodNode selector.
-	permalinks := linksRegistry
-		permaLinksForMethod: aMethodNode compiledMethod
-		inClasses:
-			((anonSubclassesBuilder allSubclassesOf: class withSelector: selector)
-				add: class;
-				yourself).
+	anonClasses := anonSubclassesBuilder allSubclassesOf: class withSelector: selector.
+	permalinks := self findPermaLinksForSelector: selector inClass: class.
 	permalinks
 		do: [ :permalink | 
 			| methodNodes |
 			methodNodes := IdentitySet with: aMethodNode.
 			permalink isInstanceSpecific
-				ifTrue: [ methodNodes
-						addAll: (((anonSubclassesBuilder allSubclassesOf: class withSelector: selector) select: [ :c | c selectors includes: selector ]) collect: [ :anonClass | (anonClass >> selector) ast ]) ].
+				ifTrue: [ methodNodes addAll: (anonClasses collect: [ :anonClass | (anonClass >> selector) ast ]) ].
 			methodNodes do: [ :methodNode | self recursiveRemoveMethodNode: methodNode fromPermaLinks: permalink ] ]
