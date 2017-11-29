@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "MarcusDenker 3/11/2015 08:45",
+	"commentStamp" : "",
 	"super" : "ProcessLocalVariable",
 	"category" : "Reflectivity-Contexts",
 	"classinstvars" : [ ],

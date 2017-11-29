@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "MarcusDenker 9/24/2015 09:54",
+	"commentStamp" : "",
 	"super" : "OCASTClosureAnalyzer",
 	"category" : "Reflectivity-Compiler",
 	"classinstvars" : [ ],

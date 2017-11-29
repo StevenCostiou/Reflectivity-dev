@@ -1,5 +1,5 @@
 *Reflectivity
 isEquivalentTo: aNode
-	^ aNode methodNode name = self methodNode name
+	^ aNode methodNode selector = self methodNode selector
 		and: [ aNode = self
 				and: [ aNode start = self start and: [ aNode stop = self stop ] ] ]

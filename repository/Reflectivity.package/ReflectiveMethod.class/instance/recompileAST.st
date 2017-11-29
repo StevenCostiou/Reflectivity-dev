@@ -1,6 +1,6 @@
 evaluation
 recompileAST
-	| links |
+ 
 	OCASTSemanticCleaner clean: ast.
 	ast compilationContext 
 		semanticAnalyzerClass: RFSemanticAnalyzer;
