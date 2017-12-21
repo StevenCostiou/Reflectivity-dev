@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposablePresenter",
+	"category" : "Reflectivity-Tools-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"watchpoint",
+		"numItems",
+		"menu",
+		"list",
+		"inspectIt"
+	],
+	"name" : "WatchpointWindow",
+	"type" : "normal"
+}

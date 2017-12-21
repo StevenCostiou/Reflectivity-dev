@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Reflectivity-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Link"
+	],
+	"instvars" : [ ],
+	"name" : "ReflectivityDemos",
+	"type" : "normal"
+}

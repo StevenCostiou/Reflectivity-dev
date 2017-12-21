@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Reflectivity-Tools-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Counters"
+	],
+	"instvars" : [
+		"node",
+		"link",
+		"count"
+	],
+	"name" : "ExecutionCounter",
+	"type" : "normal"
+}

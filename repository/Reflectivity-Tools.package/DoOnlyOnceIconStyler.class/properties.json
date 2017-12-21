@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "IconStyler",
+	"category" : "Reflectivity-Tools-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "DoOnlyOnceIconStyler",
+	"type" : "normal"
+}

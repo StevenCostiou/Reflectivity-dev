@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Halt",
+	"category" : "Reflectivity-Tools-Breakpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Break",
+	"type" : "normal"
+}

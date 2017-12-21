@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Reflectivity-Tools-Watchpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Watchpoints"
+	],
+	"instvars" : [
+		"tagname",
+		"node",
+		"link",
+		"values",
+		"recording"
+	],
+	"name" : "Watchpoint",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+system announcements
+handleMethodModified: anAnnouncement
+	self removeBreakpointsFromMethod: anAnnouncement oldMethod

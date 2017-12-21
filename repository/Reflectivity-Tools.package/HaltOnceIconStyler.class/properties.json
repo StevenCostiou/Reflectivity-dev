@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "HaltIconStyler",
+	"category" : "Reflectivity-Tools-Breakpoints",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HaltOnceIconStyler",
+	"type" : "normal"
+}

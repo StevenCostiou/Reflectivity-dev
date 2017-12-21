@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposablePresenter",
+	"category" : "Reflectivity-Examples",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"installMetalinkButton",
+		"runCodeButton",
+		"codePanelMorph",
+		"metalinkBlock",
+		"compiledMethods",
+		"coverageCode"
+	],
+	"name" : "CoverageDemo",
+	"type" : "normal"
+}
