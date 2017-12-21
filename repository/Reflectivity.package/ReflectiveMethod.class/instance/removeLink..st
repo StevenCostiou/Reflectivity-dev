@@ -4,6 +4,6 @@ removeLink: aMetaLink
 		ifTrue: [ self compileAndInstallCompiledMethod ]
 		ifFalse: [ compiledMethod invalidate ].
 	self decreaseLinkCount.
-	self linkCount = 0
-		ifTrue: [ self destroyTwin ].
-	SystemAnnouncer uniqueInstance announce: (MetalinkChanged new link: aMetaLink)
+	self linkCount = 0 ifTrue: [ self destroyTwin ].
+	SystemAnnouncer uniqueInstance announce: (MetalinkChanged new link: aMetaLink).
+		
