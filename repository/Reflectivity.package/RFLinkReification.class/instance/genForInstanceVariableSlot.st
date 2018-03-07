@@ -1,3 +1,3 @@
 generate
 genForInstanceVariableSlot
-	^link asLiteralNode
+	^RFLiteralVariableNode value: link

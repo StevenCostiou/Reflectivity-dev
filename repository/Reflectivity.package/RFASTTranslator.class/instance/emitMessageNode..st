@@ -1,9 +1,10 @@
 visitor-double dispatching
 emitMessageNode: aMessageNode
-	self emitPrepareLinkAfter: aMessageNode.
+
 	aMessageNode isCascaded
 		ifFalse: [ valueTranslator visitNode: aMessageNode receiver ].
 	aMessageNode arguments do: [ :each | valueTranslator visitNode: each ].
+	self emitPrepareLinkAfter: aMessageNode.
 	self emitMetaLinkBefore: aMessageNode.
 	aMessageNode hasMetalinkInstead
 		ifTrue: [ self emitMetaLinkInstead: aMessageNode ]

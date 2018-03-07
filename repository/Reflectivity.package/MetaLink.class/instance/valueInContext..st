@@ -1,6 +1,9 @@
 ast
 valueInContext: aBlock
-	(RFMetaContext current isActive: (self level ifNil: [0]))
+	| process |
+	process := Processor rfactiveProcess.
+	(process isActive: self level)
 		ifFalse: [ ^ self ].
-	RFMetaContext current shiftLevelUp.
-	^ aBlock ctxtEnsure: [ RFMetaContext current shiftLevelDown ]
+	process shiftLevelUp.
+	aBlock value.
+	process shiftLevelDown.

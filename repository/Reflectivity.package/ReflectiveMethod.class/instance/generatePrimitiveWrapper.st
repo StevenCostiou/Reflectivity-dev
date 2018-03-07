@@ -11,7 +11,7 @@ generatePrimitiveWrapper
 	send := RBMessageNode
 		receiver: (RBSelfNode named: #self)
 		selector:  #rFwithArgs:executeMethod:
-		arguments: {RBArrayNode statements: ast arguments . (RBLiteralNode value: wrappedMethod)}.
+		arguments: {RBArrayNode statements: ast arguments . (RFLiteralVariableNode value: wrappedMethod)}.
 	
 	wrapperMethod := RBMethodNode
 		selector: ast selector

@@ -1,3 +1,3 @@
 instance creation
 value: anObject
-	^self new binding: #RFMetaLink -> anObject
+	^self new binding: #RFMetaBinding -> anObject

@@ -1,3 +1,3 @@
 generate
 genForLiteralVariable
-	^link asLiteralNode
+	^RFLiteralVariableNode value: link

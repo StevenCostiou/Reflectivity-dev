@@ -1,3 +1,3 @@
 generate
 genForRBProgramNode
-	^link asLiteralNode
+	^RFLiteralVariableNode value: link

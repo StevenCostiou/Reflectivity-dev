@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RFReification",
+	"category" : "Reflectivity-Links",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RFReceiverReification",
+	"type" : "normal"
+}

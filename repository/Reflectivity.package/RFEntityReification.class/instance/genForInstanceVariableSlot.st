@@ -1,4 +1,4 @@
 generate
 genForInstanceVariableSlot
 	
-	^entity asLiteralNode
+	^RFLiteralVariableNode value: entity
