@@ -1,6 +1,7 @@
 baselines
 baseline: spec
 	<baseline>
+	<version: '1.0'>
 	spec
 		for: #common
 		do: [ spec
