@@ -4,13 +4,13 @@ This is an experimental version of Reflectivity with:
 - new kind of metalinks: PermaLinks, that automatically reinstall themselves on specific nodes (inspired from https://github.com/peteruhnak/metalinks-toolkit)
 
 # Installation (Pharo 7)
-'''
+```Smalltalk
 Metacello new
   baseline: 'ReflectivityDev';
   repository: 'github://StevenCostiou/Reflectivity-dev/repository';
   load.
-'''
+```
 
 # Reflectivity-dev
-Documentation here: https://github.com/SquareBracketAssociates/Booklet-Reflectivity
+Work in progress documentation here: https://github.com/SquareBracketAssociates/Booklet-Reflectivity
 
