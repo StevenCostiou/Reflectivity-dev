@@ -8,7 +8,8 @@
 	"instvars" : [
 		"linksRegistry",
 		"anonSubclassesBuilder",
-		"linkToNodesMapper"
+		"linkToNodesMapper",
+		"superJumpLinks"
 	],
 	"name" : "MetaLinkInstaller",
 	"type" : "normal"
