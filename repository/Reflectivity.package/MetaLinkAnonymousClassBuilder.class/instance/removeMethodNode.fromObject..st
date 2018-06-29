@@ -1,3 +1,4 @@
 creation
 removeMethodNode: aNode fromObject: anObject
-	anObject class removeSelector: aNode methodNode selector
+	anObject class isAnonymous ifFalse:[^self].
+	anObject class removeSelector: aNode methodNode selector.
