@@ -7,4 +7,3 @@ visitMethodNode: aMethodNode
 	aMethodNode pragmas do: [:each | self visitNode: each].
 	self analyseForLinksForNodes: aMethodNode.
 	self visitNode: aMethodNode body.
-	scope := scope outerScope.
