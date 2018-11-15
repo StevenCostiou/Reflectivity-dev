@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "PackageManifest",
-	"category" : "Reflectivity",
+	"category" : "Reflectivity-Manifest",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "RFVariableRead",
+	"category" : "Reflectivity-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"context"
+	],
+	"name" : "RFTempRead",
+	"type" : "normal"
+}

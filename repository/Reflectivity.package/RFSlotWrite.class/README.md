@@ -1,0 +1,1 @@
+I model the write to a global variable

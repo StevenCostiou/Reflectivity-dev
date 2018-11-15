@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RFReification",
+	"category" : "Reflectivity-Reifications",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RFOperationReification",
+	"type" : "normal"
+}

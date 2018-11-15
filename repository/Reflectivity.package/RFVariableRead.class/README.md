@@ -1,0 +1,1 @@
+I model the read variables. I have all the information needed to do the read when send #value

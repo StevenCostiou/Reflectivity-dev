@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MessageSend",
+	"category" : "Reflectivity-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RFMessageOperation",
+	"type" : "normal"
+}

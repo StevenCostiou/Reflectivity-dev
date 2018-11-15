@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Reflectivity-Operations",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"context",
+		"returnValue"
+	],
+	"name" : "RFReturnOperation",
+	"type" : "normal"
+}

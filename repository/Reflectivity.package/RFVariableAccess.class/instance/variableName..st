@@ -1,0 +1,3 @@
+accessing
+variableName: aSymbol
+	self subclassResponsibility

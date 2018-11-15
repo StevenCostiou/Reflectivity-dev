@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "RFReification",
-	"category" : "Reflectivity-Links",
+	"category" : "Reflectivity-Reifications",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
