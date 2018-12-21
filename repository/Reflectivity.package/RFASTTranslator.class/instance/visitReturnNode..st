@@ -2,6 +2,10 @@ visitor-double dispatching
 visitReturnNode: aReturnNode 
 
 	valueTranslator visitNode: aReturnNode value.
+	self emitPreamble: aReturnNode.
 	self emitMetaLinkBefore: aReturnNode.
-	methodBuilder returnTop.
+	aReturnNode hasMetalinkInstead
+		ifTrue: [ self emitMetaLinkInstead: aReturnNode ]
+		ifFalse: [ methodBuilder returnTop ].
+
 		

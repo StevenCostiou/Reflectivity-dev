@@ -10,9 +10,14 @@ genForRBVariableNode
 			context: thisContext;
 			variableName: #{1}.' format: {entity name})].
 	
-	entity isGlobal ifTrue: [
-			^RBParser parseExpression: ('RFGlobalRead new 
-			variableName: #{1}.' format: {entity name})].
+	entity isGlobal ifTrue: [ | ast |	
+			ast := RBParser parseExpression: ('RFGlobalRead new
+				environment: #toReplace;
+				variableName: #{1}.' format: {entity name}).
+			ast messages first arguments: {(RFLiteralVariableNode value: entity binding scope environment)}.
+
+			^ast. 
+		].
 		
 	self error: 'not supported'
 

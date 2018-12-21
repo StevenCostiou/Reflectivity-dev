@@ -1,0 +1,1 @@
+I model block creation. on #value, I return the created block

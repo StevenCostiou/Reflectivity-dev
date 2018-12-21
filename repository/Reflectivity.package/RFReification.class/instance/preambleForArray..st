@@ -1,0 +1,3 @@
+preamble
+preambleForArray: aNode
+	^#()

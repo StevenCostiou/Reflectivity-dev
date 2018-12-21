@@ -1,4 +1,4 @@
-generate
+preamble
 preambleForMethod: aNode
 	| preamble arguments |
 	preamble := OrderedCollection new.

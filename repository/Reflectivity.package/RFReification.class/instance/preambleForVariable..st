@@ -1,0 +1,3 @@
+preamble
+preambleForVariable: aNode
+	^#()

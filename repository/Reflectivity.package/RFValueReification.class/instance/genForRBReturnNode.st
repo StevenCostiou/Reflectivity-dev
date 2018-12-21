@@ -1,3 +1,3 @@
 generate
 genForRBReturnNode
-	^RBVariableNode named: #RFReifyValueVar
+	^RBVariableNode named: self varName

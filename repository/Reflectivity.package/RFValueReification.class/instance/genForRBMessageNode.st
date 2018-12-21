@@ -1,3 +1,3 @@
 generate
 genForRBMessageNode
-	^RBVariableNode named: #RFReifyValueVar
+	^RBVariableNode named: self varName

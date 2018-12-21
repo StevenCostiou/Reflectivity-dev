@@ -7,6 +7,7 @@ visitArrayNode: anArrayNode
 	
 	elementNodes := anArrayNode children.
 	elementNodes do: [:node | valueTranslator visitNode: node].
+	self emitPreamble: anArrayNode.
 	self emitMetaLinkBefore: anArrayNode.
 	anArrayNode hasMetalinkInstead
 		ifTrue: [ self emitMetaLinkInstead: anArrayNode ]

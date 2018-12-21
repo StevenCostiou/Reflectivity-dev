@@ -1,4 +1,4 @@
-generate
+preamble
 preambleForMessage: aNode
 	| preamble arguments |
 	preamble := OrderedCollection new.
@@ -16,6 +16,6 @@ preambleForMessage: aNode
 			arguments add:  (RBTemporaryNode named: name).
 	].
 	preamble addAll: (RBArrayNode statements: arguments).
-	preamble add: (RFStorePopIntoTempNode named: 'RFArgumentsReificationVar').
+	preamble add: (RFStorePopIntoTempNode named: self varName).
 	preamble addAll: arguments.
 	^ preamble 

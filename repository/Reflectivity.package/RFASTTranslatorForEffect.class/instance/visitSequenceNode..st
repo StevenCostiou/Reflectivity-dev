@@ -1,5 +1,6 @@
 visitor-double dispatching
 visitSequenceNode: aSequenceNode
+	self emitPreamble: aSequenceNode.
 	self emitMetaLinkBefore: aSequenceNode.
 	self emitPrepareLinkAfter: aSequenceNode.
 	

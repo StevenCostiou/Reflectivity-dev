@@ -1,4 +1,4 @@
-generate
+preamble
 preambleForMessage: aNode
 	| preamble arguments |
 	preamble := OrderedCollection new.

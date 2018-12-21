@@ -8,9 +8,11 @@ analyseForLinks: aNode generator: aGenerator
 		aNode propertyAt: #beforeHooks put: aGenerator beforeHooks.
  		aNode beforeHooks do: [:each | self visitNode: each]].
 	
-	aNode hasMetalinkAfter ifTrue: [  
+	aNode hasMetalinkAfter ifTrue: [    
+		aNode propertyAt: #postambles put: aGenerator postamble.
+		aNode postambles do: [:each | self visitNode: each].
 		aNode propertyAt: #afterHooks put: aGenerator afterHooks.
-		self visitNode: aNode afterHooks].
+		aNode afterHooks do: [:each | self visitNode: each]].
 	
 	aNode hasMetalinkInstead ifTrue: [  
 		aNode propertyAt: #insteadHooks put: aGenerator insteadHooks.

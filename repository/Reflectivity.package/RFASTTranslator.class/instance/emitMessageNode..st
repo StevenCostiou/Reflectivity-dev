@@ -1,10 +1,10 @@
 visitor-double dispatching
 emitMessageNode: aMessageNode
 
-	aMessageNode isCascaded
+	(aMessageNode isCascaded and: [(aMessageNode hasProperty: #hook) not])
 		ifFalse: [ valueTranslator visitNode: aMessageNode receiver ].
 	aMessageNode arguments do: [ :each | valueTranslator visitNode: each ].
-	self emitPrepareLinkAfter: aMessageNode.
+	self emitPreamble: aMessageNode.
 	self emitMetaLinkBefore: aMessageNode.
 	aMessageNode hasMetalinkInstead
 		ifTrue: [ self emitMetaLinkInstead: aMessageNode ]
@@ -12,4 +12,4 @@ emitMessageNode: aMessageNode
 			aMessageNode isSuperSend
 				ifTrue: [ methodBuilder send: aMessageNode selector toSuperOf: self compilationContext getClass ]
 				ifFalse: [ methodBuilder send: aMessageNode selector ] ].
-	self emitMetaLinkAfter: aMessageNode.
+	self emitMetaLinkAfterNoEnsure: aMessageNode.

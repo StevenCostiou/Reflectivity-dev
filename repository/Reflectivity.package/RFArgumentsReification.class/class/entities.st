@@ -1,3 +1,3 @@
 plugin interface
 entities
-	^{RBMessageNode. RBMethodNode. RBBlockNode}
+	^{RBMessageNode. RBMethodNode. RBSequenceNode}

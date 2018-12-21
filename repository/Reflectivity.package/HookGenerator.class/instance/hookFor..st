@@ -26,5 +26,7 @@ hookFor: aLink
 				hook }].
 	aLink hasCondition ifTrue: [hook := self wrapCondition: hook link: aLink].
 	(aLink hasMetaLevel or: [self hasOption: #optionMetalevel for: aLink]) ifTrue: [hook := self wrapInContext: hook link: aLink].		
+	
+	hook propertyAt: #hook put: true.
 			
 	^ hook

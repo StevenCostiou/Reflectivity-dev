@@ -4,6 +4,3 @@ wrapInContext: hook link: aLink
 		receiver: (RFLiteralVariableNode value: aLink)
 		selector: #valueInContext:
 		arguments: {self encloseInBlock: hook}
-				
-
-	

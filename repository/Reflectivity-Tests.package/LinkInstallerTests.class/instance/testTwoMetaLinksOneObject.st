@@ -16,7 +16,7 @@ testTwoMetaLinksOneObject
 	metalink2 := MetaLink new.
 	metalink2 selector: #value.
 	metalink2 metaObject: [ obj1 tagExec: obj1 tag + 1 ].
-	metalink2 control: #after.
+	metalink2 control: #before.
 	(obj1 class >> #exampleMethod) ast link: metalink2 forObject: obj1.
 
 	"Only the object on which has been installed is affected"
@@ -30,6 +30,8 @@ testTwoMetaLinksOneObject
 	We should also test that one likn can be removed while the other stays active."
 	(obj1 class >> #exampleMethod) ast removeLink: metalink forObject: obj1.
 	(obj1 class >> #exampleMethod) ast removeLink: metalink2 forObject: obj1.
+	metalink uninstall.
+	metalink2 uninstall.
 	obj1 tagExec: nil.
 	obj1 exampleMethod.
 	obj2 exampleMethod.

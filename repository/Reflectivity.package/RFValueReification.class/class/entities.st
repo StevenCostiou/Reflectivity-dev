@@ -1,3 +1,3 @@
 plugin interface
 entities
-	^{RBVariableNode. RBAssignmentNode. RBReturnNode. RBMessageNode . LiteralVariable . Slot}
+	^{RBValueNode . RBReturnNode. RBMethodNode . LiteralVariable . Slot} 

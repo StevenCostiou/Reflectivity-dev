@@ -1,10 +1,11 @@
 visitor-double dispatching
 visitAssignmentNode: anAssignmentNode 
 	valueTranslator visitNode: anAssignmentNode value.
+	self emitPreamble: anAssignmentNode.
 	self emitMetaLinkBefore: anAssignmentNode.
+	self emitPreamble: anAssignmentNode variable.
 	self emitMetaLinkBefore: anAssignmentNode variable.
 	
-
 	anAssignmentNode hasMetalinkInstead
 				ifTrue: [ self emitMetaLinkInstead: anAssignmentNode ]
 				ifFalse: [

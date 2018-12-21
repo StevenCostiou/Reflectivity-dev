@@ -1,3 +1,3 @@
 *Reflectivity
 readNodes
-	^ self astNodes select: [ :each | each isRead ]
+	^ self astNodes select: [ :ast | ast isRead ]

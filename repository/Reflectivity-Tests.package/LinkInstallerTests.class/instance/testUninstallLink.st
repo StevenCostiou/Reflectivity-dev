@@ -12,4 +12,4 @@ testUninstallLink
 	metalink uninstall.
 	
 	self deny: obj1 class isAnonymous.
-	self assert: node links isNil
+	self assert: node links isEmpty

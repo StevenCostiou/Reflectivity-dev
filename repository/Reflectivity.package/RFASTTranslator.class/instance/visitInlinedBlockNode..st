@@ -28,5 +28,6 @@ visitInlinedBlockNode: anOptimizedBlockNode
 			methodBuilder storeTemp: tempName.
 			methodBuilder popTop.
 		 ]].
+	self emitPreamble: anOptimizedBlockNode.
 	self emitMetaLinkBefore: anOptimizedBlockNode.
 	self visitNode: anOptimizedBlockNode body.

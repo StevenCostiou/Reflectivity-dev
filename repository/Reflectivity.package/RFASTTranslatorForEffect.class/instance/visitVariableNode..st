@@ -3,8 +3,8 @@ visitVariableNode: aVariableNode
 	
 	| binding |
 	
+	self emitPreamble: aVariableNode.
 	self emitMetaLinkBefore: aVariableNode.
-	self emitPrepareLinkAfter: aVariableNode.
 	
 	aVariableNode hasMetalinkInstead
 		ifTrue: [ self emitMetaLinkInstead: aVariableNode ].
@@ -14,4 +14,4 @@ visitVariableNode: aVariableNode
 	(binding isLiteralVariable or: [ binding isUndeclared ])
 		ifTrue: [ methodBuilder addLiteral: binding assoc ].
 		
-	self emitMetaLinkAfter: aVariableNode.
+	self emitMetaLinkAfterNoEnsure: aVariableNode.

@@ -21,6 +21,7 @@ visitBlockNode: aBlockNode
 			withVars: (aBlockNode scope tempVector collect: [:each| each name]) asArray.
 	].
 	methodBuilder addTemps: tempNames.
+	self emitPreamble: aBlockNode.
 	self emitMetaLinkBefore: aBlockNode.
 	valueTranslator visitNode: aBlockNode body.
 	methodBuilder addBlockReturnTopIfRequired.

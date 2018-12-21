@@ -1,3 +1,3 @@
 generate
 genForRBProgramNode
-	^RFLiteralVariableNode value: (entity methodNode method)
+	^RFLiteralVariableNode value: entity methodNode method

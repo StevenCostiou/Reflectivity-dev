@@ -1,3 +1,3 @@
 *Reflectivity
 links
-	^self propertyAt: #links ifAbsent: nil
+	^self propertyAt: #links ifAbsent: #()

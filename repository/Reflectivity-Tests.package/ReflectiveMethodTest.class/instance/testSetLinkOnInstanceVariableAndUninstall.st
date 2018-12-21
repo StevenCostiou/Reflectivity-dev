@@ -10,4 +10,4 @@ testSetLinkOnInstanceVariableAndUninstall
 	self assert: (ReflectivityExamples >> #exampleIvarRead) linkCount = 1.
 	link uninstall.
 	self assert: (ReflectivityExamples >> #exampleIvarRead) class = CompiledMethod.
-	self assert: (ivar links isNil).
+	self assert: (ivar links isEmpty).

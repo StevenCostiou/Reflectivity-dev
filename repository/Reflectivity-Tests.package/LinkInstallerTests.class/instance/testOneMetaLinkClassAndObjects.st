@@ -19,7 +19,7 @@ testOneMetaLinkClassAndObjects
 	metalink2 := MetaLink new.
 	metalink2 selector: #value.
 	metalink2 metaObject: [counter := counter + 2].
-	metalink2 control: #after.
+	metalink2 control: #before.
 	(ReflectivityExamples >> #exampleMethod) ast link: metalink2 forObject: obj3.
 	
 	"Original method must execute as usual"

@@ -7,14 +7,12 @@ visitMethodNode: aMethodNode
 	methodBuilder compilationContext: aMethodNode compilationContext.
 	methodBuilder addTemps: aMethodNode scope tempVarNames.
 	
-	aMethodNode isPrimitive ifFalse: [self emitMetaLinkBefore: aMethodNode].
+	aMethodNode isPrimitive ifFalse: [self emitPreamble: aMethodNode. self emitMetaLinkBefore: aMethodNode].
 
 	methodBuilder properties: aMethodNode methodProperties.
 	methodBuilder irPrimitive: aMethodNode primitiveFromPragma.
 	aMethodNode pragmas do: [:each | self visitPragmaNode: each].
 	methodBuilder numArgs: aMethodNode arguments size.
-	
-	self emitPrepareLinkAfter: aMethodNode.
 	
 	(aMethodNode hasMetalinkInstead and: [ aMethodNode isPrimitive not ])
 				ifTrue: [ self emitMetaLinkInstead: aMethodNode. methodBuilder returnTop.
@@ -26,6 +24,6 @@ visitMethodNode: aMethodNode
 			withVars: (aMethodNode scope tempVector collect: [:each| each name]) asArray.
 	].
 	effectTranslator visitNode: aMethodNode body.
+	aMethodNode isPrimitive ifFalse: [self emitMetaLinkAfterNoEnsure: aMethodNode].
+	(aMethodNode hasProperty: #wrappedPrimitive) ifTrue: [methodBuilder pushTemp: #RFReifyValueVar; returnTop].
 	aMethodNode body lastIsReturn ifFalse:  [methodBuilder pushReceiver; returnTop].
-	self emitMetaLinkAfter: aMethodNode.
-	aMethodNode hasMetalinkAfter ifTrue: [methodBuilder returnTop].

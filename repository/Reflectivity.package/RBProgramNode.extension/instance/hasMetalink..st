@@ -1,3 +1,3 @@
 *Reflectivity
 hasMetalink: aMetaLink
-	^self links isNotNil and: [(self links includes: aMetaLink)]
+	^self links includes: aMetaLink
