@@ -6,5 +6,5 @@ testSetLinkOnInstanceVariable
 	ivar := ReflectivityExamples slotNamed: #ivar.
 	ivar link: link.
 	self assert: (ivar links includes: link).
-	self assert: (ReflectivityExamples >> #exampleIvarRead) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleIvarRead) class equals: ReflectiveMethod.
 	link uninstall.

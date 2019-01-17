@@ -6,8 +6,8 @@ testSetLinkOnInstanceVariableAndUninstall
 	ivar := ReflectivityExamples slotNamed: #ivar.
 	ivar link: link.
 	self assert: (ivar links includes: link).
-	self assert: (ReflectivityExamples >> #exampleIvarRead) class = ReflectiveMethod.
-	self assert: (ReflectivityExamples >> #exampleIvarRead) linkCount = 1.
+	self assert: (ReflectivityExamples >> #exampleIvarRead) class equals: ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleIvarRead) linkCount equals: 1.
 	link uninstall.
-	self assert: (ReflectivityExamples >> #exampleIvarRead) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #exampleIvarRead) class equals: CompiledMethod.
 	self assert: (ivar links isEmpty).

@@ -1,6 +1,6 @@
 tests - creation
 testCreateReflectiveMethod
 	| compiledMethod reflectiveMethod |
-	compiledMethod := ReflectivityExamples>>#exampleMethod.
+	compiledMethod := ReflectivityExamples >> #exampleMethod.
 	reflectiveMethod := ReflectiveMethod on: compiledMethod.
-	self assert: reflectiveMethod class = ReflectiveMethod.
+	self assert: reflectiveMethod class equals: ReflectiveMethod

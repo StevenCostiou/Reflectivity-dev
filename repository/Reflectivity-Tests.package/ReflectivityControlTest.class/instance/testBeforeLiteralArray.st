@@ -8,9 +8,9 @@ testBeforeLiteralArray
 		selector: #tagExec.
 	literalArray link: link.
 	self assert: literalArray hasMetalinkBefore.
-	self assert: (ReflectivityExamples >> #exampleLiteralArray) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleLiteralArray) class equals: ReflectiveMethod.
 	self assert: tag isNil.
-	self assert: ReflectivityExamples new exampleLiteralArray = #(1).
-	self assert: tag = 'yes'.
-	self assert: (ReflectivityExamples >> #exampleLiteralArray) class = CompiledMethod.
+	self assert: ReflectivityExamples new exampleLiteralArray equals: #(1).
+	self assert: tag equals: 'yes'.
+	self assert: (ReflectivityExamples >> #exampleLiteralArray) class equals: CompiledMethod.
 	self deny: (ReflectivityExamples >> #exampleLiteralArray) isQuick.

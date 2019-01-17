@@ -6,7 +6,7 @@ testSetLink
 	sendNode := (ReflectivityExamples >> #exampleMethod) ast body statements first value.
 	sendNode link: link.
 	self assert: (sendNode hasMetalink: link).
-	self assert: (ReflectivityExamples >> #exampleMethod) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleMethod) class equals: ReflectiveMethod.
 	sendNode removeLink: link.
 	(ReflectivityExamples >> #exampleMethod) destroyTwin.
 	self assert: (ReflectivityExamples >> #exampleMethod) class equals: CompiledMethod.

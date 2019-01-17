@@ -9,6 +9,6 @@ testInsteadVariableReadGlobal
 		arguments: #(#name).
 	varNode link: link.
 	self assert: varNode hasMetalink.
-	self assert: (ReflectivityExamples >> #exampleGlobalRead) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleGlobalRead) class equals: ReflectiveMethod.
 	instance := ReflectivityExamples new.
-	self assert: instance exampleGlobalRead value = GlobalForTesting.
+	self assert: instance exampleGlobalRead value equals: GlobalForTesting.

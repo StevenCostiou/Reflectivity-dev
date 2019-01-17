@@ -1,4 +1,5 @@
 running
 tearDown
 	ASTCache default: cache.
-	node removeLink: link
+	node removeLink: link.
+	super tearDown

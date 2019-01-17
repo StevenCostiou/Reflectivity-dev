@@ -7,5 +7,5 @@ testSetLinkOnClassVariable
 	classVar link: link.
 
 	self assert: (classVar links includes: link).
-	self assert: (ReflectivityExamples >> #exampleClassVarRead) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleClassVarRead) class equals: ReflectiveMethod.
 	classVar removeProperty: #links.

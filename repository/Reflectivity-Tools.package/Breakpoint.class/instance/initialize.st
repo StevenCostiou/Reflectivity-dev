@@ -1,3 +1,3 @@
 initialization
 initialize
-	options := #(+ optionCompileOnLinkInstallation)
+	options := #(+ optionCompileOnLinkInstallation + optionAnnounce)

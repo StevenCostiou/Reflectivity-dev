@@ -1,5 +1,3 @@
 examples
 exampleMessageSend
 	self exampleOperation
-	
-	

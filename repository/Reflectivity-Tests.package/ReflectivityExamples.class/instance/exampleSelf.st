@@ -1,0 +1,3 @@
+examples
+exampleSelf
+	self

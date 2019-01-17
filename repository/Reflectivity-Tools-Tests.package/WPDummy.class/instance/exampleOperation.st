@@ -1,3 +1,4 @@
 examples
-exampleOperation 
+exampleOperation
+	<sampleInstance>
 	^ 2+3

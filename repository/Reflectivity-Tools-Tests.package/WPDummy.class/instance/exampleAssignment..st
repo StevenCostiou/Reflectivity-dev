@@ -1,5 +1,5 @@
 examples
 exampleAssignment: anObject
-	foo := anObject.
+	foo := anObject
 	
 	

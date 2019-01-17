@@ -1,3 +1,4 @@
-initialization
+running
 tearDown
-	MetaLink uninstallAll
+	MetaLink uninstallAll.
+	super tearDown.

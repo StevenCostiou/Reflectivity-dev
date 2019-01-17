@@ -1,3 +1,3 @@
 examples
 exampleSendTwoArgs
-	^ Array with: 1 with: 2.
+	^ Array with: 1 with: 2

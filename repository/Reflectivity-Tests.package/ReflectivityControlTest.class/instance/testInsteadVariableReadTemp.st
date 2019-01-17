@@ -9,6 +9,6 @@ testInsteadVariableReadTemp
 		arguments: #(#name).
 	varNode link: link.
 	self assert: varNode hasMetalink.
-	self assert: (ReflectivityExamples >> #exampleAssignment) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleAssignment) class equals: ReflectiveMethod.
 	instance := ReflectivityExamples new.
-	self assert: instance exampleAssignment value = 3.
+	self assert: instance exampleAssignment value equals: 3.

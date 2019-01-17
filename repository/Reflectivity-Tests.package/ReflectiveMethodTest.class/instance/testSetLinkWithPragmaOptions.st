@@ -6,9 +6,9 @@ testSetLinkWithPragmaOptions
 	sendNode := (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) ast body statements first value.
 	sendNode link: link.
 	self assert: (sendNode links includes: link).
-	self assert: (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) class = CompiledMethod.
+	self assert: (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) class equals: CompiledMethod.
 	sendNode removeLink: link.
 	(ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) destroyTwin.
-	self assert: (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) class = CompiledMethod.
+	self assert: (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) class equals: CompiledMethod.
 	self assert: (ReflectivityExamples>>#exampleMethodWithMetaLinkOptions) reflectiveMethod isNil.
 	

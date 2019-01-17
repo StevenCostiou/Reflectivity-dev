@@ -1,4 +1,4 @@
-as yet unclassified
+example
 methodWithInstVarAccess
 	instVar := 5.
 	instVar := 6.

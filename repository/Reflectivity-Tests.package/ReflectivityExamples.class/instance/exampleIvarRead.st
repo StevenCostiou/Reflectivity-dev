@@ -1,3 +1,3 @@
 examples
 exampleIvarRead
-	^ivar 
+	^ivar

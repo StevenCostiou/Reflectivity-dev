@@ -9,6 +9,6 @@ install
 				arguments: #(value);
 				control: #after;
 				condition: [ recording ];
-				option: #(+ optionWeakAfter).
+				option: #(+ optionWeakAfter +optionAnnounce).
 	node link: link.
 	self class allWatchpoints at: node put: self.

@@ -9,7 +9,7 @@ testInsteadLiteral
 		selector: #return3.
 	literalNode link: link.
 	self assert: literalNode hasMetalinkInstead.
-	self assert: (ReflectivityExamples >> #exampleLiteral) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleLiteral) class equals: ReflectiveMethod.
 	self assert: ReflectivityExamples new exampleLiteral == 3.
-	self assert: (ReflectivityExamples >> #exampleLiteral) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #exampleLiteral) class equals: CompiledMethod.
 	self deny: (ReflectivityExamples >> #exampleLiteral) isQuick.

@@ -1,3 +1,3 @@
-as yet unclassified
+removing
 removeNewMethodWithInstVarAccess
 	self class removeSelector: #newMethodWithInstVarAccess

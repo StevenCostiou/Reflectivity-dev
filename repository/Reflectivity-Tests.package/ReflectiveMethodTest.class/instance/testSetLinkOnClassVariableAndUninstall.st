@@ -7,8 +7,8 @@ testSetLinkOnClassVariableAndUninstall
 	classVar link: link.
 
 	self assert: (classVar links includes: link).
-	self assert: (ReflectivityExamples >> #exampleClassVarRead) class = ReflectiveMethod.
-	self assert: (ReflectivityExamples >> #exampleClassVarRead) linkCount = 1.
+	self assert: (ReflectivityExamples >> #exampleClassVarRead) class equals: ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleClassVarRead) linkCount equals: 1.
 	
 	link uninstall.
-	self assert: (ReflectivityExamples >> #exampleClassVarRead) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #exampleClassVarRead) class equals: CompiledMethod.

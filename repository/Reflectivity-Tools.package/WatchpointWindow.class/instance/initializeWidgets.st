@@ -10,5 +10,5 @@ initializeWidgets
 	numItems := 7.
 	self refreshItems.
 	
-	inspectIt label: 'Inspect ...'.
+	inspectIt label: 'Inspect...'.
 	inspectIt enabled: false.

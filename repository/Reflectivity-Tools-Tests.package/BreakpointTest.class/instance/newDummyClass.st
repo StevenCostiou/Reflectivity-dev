@@ -1,4 +1,4 @@
-utils
+utilities
 newDummyClass
 	^ Object
 		subclass: #DummyClassForBreakpoint

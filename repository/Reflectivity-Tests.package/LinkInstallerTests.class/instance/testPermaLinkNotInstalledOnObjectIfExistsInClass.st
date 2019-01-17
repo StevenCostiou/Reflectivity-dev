@@ -14,4 +14,5 @@ testPermaLinkNotInstalledOnObjectIfExistsInClass
 	self assert: link nodes size equals: 8.		
 	
 	link uninstall.
+	ReflectivityExamples2 new removeNewMethodWithInstVarAccess.	
 	

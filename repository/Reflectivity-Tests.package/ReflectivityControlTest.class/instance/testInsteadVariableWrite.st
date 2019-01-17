@@ -9,6 +9,6 @@ testInsteadVariableWrite
 		arguments: #(#name #newValue).
 	varNode link: link.
 	self assert: varNode hasMetalink.
-	self assert: (ReflectivityExamples >> #exampleAssignment) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleAssignment) class equals: ReflectiveMethod.
 	instance := ReflectivityExamples new.
-	self assert: instance exampleAssignment = 3.
+	self assert: instance exampleAssignment equals: 3.

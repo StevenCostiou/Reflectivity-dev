@@ -1,5 +1,6 @@
 running
 setUp
+	super setUp.
 	Smalltalk garbageCollectMost.
 	MetaLink uninstallAll.
 	Smalltalk garbageCollectMost.

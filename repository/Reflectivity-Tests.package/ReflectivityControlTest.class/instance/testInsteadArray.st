@@ -9,7 +9,7 @@ testInsteadArray
 		selector: #return3.
 	arrayNode link: link.
 	self assert: arrayNode hasMetalinkInstead.
-	self assert: (ReflectivityExamples >> #exampleArray) class = ReflectiveMethod.
-	self assert: ReflectivityExamples new exampleArray = 3.
-	self assert: (ReflectivityExamples >> #exampleArray) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #exampleArray) class equals: ReflectiveMethod.
+	self assert: ReflectivityExamples new exampleArray equals: 3.
+	self assert: (ReflectivityExamples >> #exampleArray) class equals: CompiledMethod.
 	self deny: (ReflectivityExamples >> #exampleArray) isQuick.

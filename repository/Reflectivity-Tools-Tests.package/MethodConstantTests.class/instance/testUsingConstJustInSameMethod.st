@@ -2,7 +2,7 @@ tests
 testUsingConstJustInSameMethod
 
 	| values |
-	<expectedFailure>
+	self skip. "not working for the first call: would need on stack replacement"
 	values := OrderedCollection new.
 	2 timesRepeat: [ values add: DateAndTime now asMethodConstant ].
 	

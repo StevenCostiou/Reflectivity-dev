@@ -9,8 +9,8 @@ testInsteadPrimitiveMethod
 		control: #instead.
 	node link: link.
 	self assert: node hasMetalink.
-	self assert: (ReflectivityExamples >> #examplePrimitiveMethod) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #examplePrimitiveMethod) class equals: CompiledMethod.
 	self assert: tag isNil.
 	ReflectivityExamples new examplePrimitiveMethod.
-	self assert: tag = #yes.
-	self assert: (ReflectivityExamples >> #examplePrimitiveMethod) class = CompiledMethod.
+	self assert: tag equals: #yes.
+	self assert: (ReflectivityExamples >> #examplePrimitiveMethod) class equals: CompiledMethod.

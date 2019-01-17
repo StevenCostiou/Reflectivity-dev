@@ -1,4 +1,4 @@
-as yet unclassified
+example
 methodWithClassVarAccess
 	classVar := 5.
 	classVar := 6.

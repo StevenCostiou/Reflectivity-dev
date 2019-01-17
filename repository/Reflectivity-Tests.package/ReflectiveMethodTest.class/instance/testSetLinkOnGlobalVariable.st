@@ -6,7 +6,7 @@ testSetLinkOnGlobalVariable
 	globalVar := (Smalltalk globals at: #GlobalForTesting) binding.
 	globalVar link: link. 
 	self assert: (globalVar links includes: link).
-	self assert: (ReflectivityExamples >> #exampleGlobalRead) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleGlobalRead) class equals: ReflectiveMethod.
 	link uninstall.
 	globalVar removeProperty: #links.
 	

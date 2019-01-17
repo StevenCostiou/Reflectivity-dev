@@ -2,14 +2,14 @@ tests - variables
 testReifySlotVariable
 	| iVar instance |
 	iVar := ReflectivityExamples slotNamed: #ivar.
-	link := MetaLink new 
-		metaObject: self; 
+	link := MetaLink new
+		metaObject: self;
 		selector: #tagExec:;
 		arguments: #(variable).
 	iVar link: link.
 	self assert: iVar hasMetalink.
-	self assert: (ReflectivityExamples >> #exampleIvarRead) class = ReflectiveMethod.
-	self assert: (tag isNil).
+	self assert: (ReflectivityExamples >> #exampleIvarRead) class equals: ReflectiveMethod.
+	self assert: tag isNil.
 	instance := ReflectivityExamples new.
-	self assert: (instance exampleIvarRead = 33).
-	self assert: (tag = iVar).
+	self assert: instance exampleIvarRead equals: 33.
+	self assert: tag equals: iVar

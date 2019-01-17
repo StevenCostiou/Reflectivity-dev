@@ -1,4 +1,4 @@
-as yet unclassified
+example
 methodWithTempVarAccess
 	|temp|
 	temp := 5.

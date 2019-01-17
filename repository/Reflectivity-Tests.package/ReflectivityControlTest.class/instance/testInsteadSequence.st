@@ -10,8 +10,8 @@ testInsteadSequence
 	self assert: (seqNode isKindOf: RBSequenceNode).
 	seqNode link: link.
 	self assert: seqNode hasMetalinkInstead.
-	self assert: (ReflectivityExamples >> #exampleAssignment) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleAssignment) class equals: ReflectiveMethod.
 	self assert: tag isNil.
 	ReflectivityExamples new exampleAssignment.
-	self assert: tag = 'yes'.
-	self assert: (ReflectivityExamples >> #exampleAssignment) class = CompiledMethod.
+	self assert: tag equals: 'yes'.
+	self assert: (ReflectivityExamples >> #exampleAssignment) class equals: CompiledMethod.

@@ -1,4 +1,4 @@
-as yet unclassified
+example
 newMethodWithInstVarAccess
 	instVar := 5.
 	instVar := 6.

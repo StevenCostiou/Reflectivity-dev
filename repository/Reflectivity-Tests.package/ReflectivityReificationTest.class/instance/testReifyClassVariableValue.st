@@ -8,8 +8,8 @@ testReifyClassVariableValue
 		arguments: #(value).
 	classVar link: link.
 	self assert: classVar hasMetalink.
-	self assert: (ReflectivityExamples >> #exampleClassVarRead) class = ReflectiveMethod.
+	self assert: (ReflectivityExamples >> #exampleClassVarRead) class equals: ReflectiveMethod.
 	self assert: (tag isNil).
 	instance := ReflectivityExamples new.
-	self assert: (instance exampleClassVarRead = #AClassVar).
-	self assert: (tag = #AClassVar).
+	self assert: instance exampleClassVarRead equals: #AClassVar.
+	self assert: tag equals: #AClassVar.

@@ -9,7 +9,7 @@ testInsteadLiteralArray
 		selector: #return3.
 	literalArray link: link.
 	self assert: literalArray hasMetalinkInstead.
-	self assert: (ReflectivityExamples >> #exampleLiteralArray) class = ReflectiveMethod.
-	self assert: ReflectivityExamples new exampleLiteralArray = 3.
-	self assert: (ReflectivityExamples >> #exampleLiteralArray) class = CompiledMethod.
+	self assert: (ReflectivityExamples >> #exampleLiteralArray) class equals: ReflectiveMethod.
+	self assert: ReflectivityExamples new exampleLiteralArray equals: 3.
+	self assert: (ReflectivityExamples >> #exampleLiteralArray) class equals: CompiledMethod.
 	self deny: (ReflectivityExamples >> #exampleLiteralArray) isQuick.
