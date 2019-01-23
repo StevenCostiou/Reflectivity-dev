@@ -23,9 +23,9 @@ testLinkOnTempVarForObject
 		option: #write
 		instanceSpecific: false.
 	self assert: link nodes size equals: 2.
-	self assert: (link nodes allSatisfy: [ :node | node isWrite ]).
-	self assert: (link nodes allSatisfy: [ :node | node name = #temp ]).
-	self assert: (link nodes allSatisfy: [ :node | node isTemp ]).
+	self assert: (link nodes allSatisfy: [ :node | node isAssignment]).
+	self assert: (link nodes allSatisfy: [ :node | node variable name = #temp ]).
+	self assert: (link nodes allSatisfy: [ :node | node variable isTemp ]).
 	link uninstall.
 	self assert: link nodes isEmpty.
 	
